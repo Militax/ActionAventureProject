@@ -1,8 +1,8 @@
 
-=== Tue Feb 11 17:49:45 2020
+=== Wed Feb 19 15:59:47 2020
 
 Packages were changed.
-Update Mode: mergeDefaultDependencies
+Update Mode: resetToDefaultDependencies
 
 The following packages were added:
   com.unity.textmeshpro@2.0.1
