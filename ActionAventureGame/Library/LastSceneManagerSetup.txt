@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/_LAB/Matis/Matis.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
