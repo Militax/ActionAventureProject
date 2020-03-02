@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game
+
+/// <summary>
+/// Matis Duperray
+/// 
+/// Script qui invoque les pouvoirs
+/// </summary>
+namespace player
 {
     public class MDT_PlayerPowers : MonoBehaviour
     {
-        
-        
-        
-        void Awake()
-        {
-            
-        }
+        public GameObject WindPowerPrefab;
+
         
         void Start()
         {
@@ -21,10 +22,16 @@ namespace Game
         
         void Update()
         {
-            
+            InstantiateWindPower();
         }
         
         
-        
+        void InstantiateWindPower()
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse1))//Clique droit
+            {
+                GameObject WindWave = Instantiate(WindPowerPrefab, transform.position, transform.rotation);
+            }
+        }
     }
 }
