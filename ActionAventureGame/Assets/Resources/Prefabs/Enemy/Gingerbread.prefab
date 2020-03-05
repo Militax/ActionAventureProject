@@ -116,11 +116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2aaed1a75f24584889038212bc9de0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8883492670370414281, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
+  player: {fileID: 0}
   maximumHealth: 1
   health: 1
   isAlive: 1
-  moveSpeed: 5
+  moveSpeed: 1
   attackDamage: 1
   attackCooldown: 2
   canAttack: 1
