@@ -1,26 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+//using TMPro;
+using GameManagement;
 
-public class CoinPicker : MonoBehaviour
+
+
+/// <summary>
+/// Theodore Labyt
+/// 
+/// Pick up coin
+/// </summary>
+
+namespace Economic
 {
-	
-	private float coin = 0;
-
-	public TextMeshProUGUI textCoins;
-
-	//récupération des pièces et incrémentation de ++ dans le compteur de pièces
-	private void OnTriggerEnter2D(Collider2D other)
+	public class CoinPicker : MonoBehaviour
 	{
-		if(other.transform.tag == "Coin")
+		//public TextMeshProUGUI textCoins;
+
+		//récupération des pièces et incrémentation de ++ dans le compteur de pièces
+		private void OnTriggerEnter2D(Collider2D other)
 		{
-			coin ++;
-			textCoins.text = coin.ToString();
+			if (other.transform.tag == "Player")
+			{
+				GameManager.Instance.CoinOwned++;
+				Debug.Log(GameManager.Instance.CoinOwned);
+				//textCoins.text = coin.ToString();
 
-			Destroy(other.gameObject);
+				Destroy(gameObject);
+			}
 		}
+
 	}
-
-}  
-
+}
