@@ -35,6 +35,7 @@ namespace Player
         {
             //On deplace le rigidbody en fonction des valeurs etablies
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            rb.velocity = (transform.position - transform.position).normalized * moveSpeed;
         }
     }
 }

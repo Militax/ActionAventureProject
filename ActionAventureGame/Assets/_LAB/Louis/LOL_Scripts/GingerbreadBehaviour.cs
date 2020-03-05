@@ -50,7 +50,7 @@ public class GingerbreadBehaviour : Enemy
     {
         if (Vector2.Distance(transform.position, player.transform.position) > minimumDistance)
         {
-            rb.velocity = (player.transform.position - transform.position).normalized * (baseSpeed * speedModifier);
+            rb.velocity = (player.transform.position - transform.position).normalized * baseSpeed;
             AttackRange = false;
         }
         else
