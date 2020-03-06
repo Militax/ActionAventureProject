@@ -10,21 +10,24 @@ namespace Power
         public float power = 1f;
 
         Rigidbody2D rb;
-        Vector2 WaveMovement;
+        public Vector2 WaveDirection; //Direction du tir
 
         void OnEnable()
-        {
+        {//Quand l'objet s'instanci
             rb = GetComponent<Rigidbody2D>();
-            WaveMovement.x = 1;
-            WaveMovement.y = 0;
+            WaveDirection.x = 0;
+            WaveDirection.y = 0;
             StartCoroutine(PowerDuration());
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            rb.MovePosition(rb.position + WaveMovement * power * Time.fixedDeltaTime);
+            //Fait avancer la vague en fonction de (DIRECTION * FORCE)
+            rb.velocity = WaveDirection * (power*100) * Time.fixedDeltaTime;
         }
 
+
+        //Durée de vie de la vague
         IEnumerator PowerDuration()
         {
             yield return new WaitForSeconds(duration);
