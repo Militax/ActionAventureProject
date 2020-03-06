@@ -34,7 +34,5 @@ namespace Power
             Destroy(gameObject);
         }
 
-
-
     }
 }

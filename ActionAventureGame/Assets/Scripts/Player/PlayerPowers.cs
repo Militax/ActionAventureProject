@@ -144,6 +144,7 @@ namespace Player
 
                         WindWaveTL.GetComponent<WindPower>().WaveDirection.x = (-1);
                         WindWaveTL.GetComponent<WindPower>().WaveDirection.y = 1;
+                        WindWaveTL.GetComponent<WindPower>().power /= Mathf.Sqrt(2);
                         break;
 
                     case ("TOP RIGHT"):
@@ -151,6 +152,7 @@ namespace Player
 
                         WindWaveTR.GetComponent<WindPower>().WaveDirection.x = 1;
                         WindWaveTR.GetComponent<WindPower>().WaveDirection.y = 1;
+                        WindWaveTR.GetComponent<WindPower>().power /= Mathf.Sqrt(2);
                         break;
 
                     case ("DOWN LEFT"):
@@ -158,6 +160,7 @@ namespace Player
 
                         WindWaveDL.GetComponent<WindPower>().WaveDirection.x = (-1);
                         WindWaveDL.GetComponent<WindPower>().WaveDirection.y = (-1);
+                        WindWaveDL.GetComponent<WindPower>().power /= Mathf.Sqrt(2);
                         break;
 
                     case ("DOWN RIGHT"):
@@ -165,6 +168,7 @@ namespace Player
 
                         WindWaveDR.GetComponent<WindPower>().WaveDirection.x = 1;
                         WindWaveDR.GetComponent<WindPower>().WaveDirection.y = (-1);
+                        WindWaveDR.GetComponent<WindPower>().power /= Mathf.Sqrt(2);
                         break;
                 }
             }
