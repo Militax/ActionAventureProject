@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 
     // Health
     public float maximumHealth;
-    public float health;
+    protected float health;
     [HideInInspector] public bool isDead = false;
 
     // Movement
@@ -23,9 +23,7 @@ public class Enemy : MonoBehaviour
 
     // Attack
     public float attackDamage;
-    public float attackModifier = 1f;
-    protected float attackCooldown;
-    public float initialAttackCooldown;
+    public float attackCooldown;
     public bool isAttacking = false;
 
 
