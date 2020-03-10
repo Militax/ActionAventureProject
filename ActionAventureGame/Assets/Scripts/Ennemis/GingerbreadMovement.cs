@@ -5,57 +5,152 @@ using Player;
 
 namespace Ennemy
 {
+
+
+    public enum AttackDirection
+    {
+        NorthWest, NorthEast, SouthWest, SouthEast
+    }
+
+    /// <summary>
+    /// Louis Lefebvre
+    /// 
+    /// Mouvement de l'ennemi Gingerbread
+    /// </summary>
     public class GingerbreadMovement : EnemyValues
     {
-        
+
 
         #region Variables
-        private bool attackRange = false;
-        public float attackDistance;
+        private bool isInAttackRange = false;
+        public float minimumDistance;
+
+        #region attaque
+        private bool canAttack = true;
+        private AttackDirection attackDirection;
+        [SerializeField] private GameObject NE, NW, SE, SW;
+        #endregion
+
         #endregion
 
         void Start()
         {
             OnStart();
+            Initialisation();
         }
         
         void Update()
         {
             Move();
+            DetectPlayer();
             Attack();
         }
 
 
+
+        void Initialisation()
+        {
+            //on set off les prefabs des colliders d'attaque
+            NE.SetActive(false);
+            NW.SetActive(false);
+            SE.SetActive(false);
+            SW.SetActive(false);
+            //on set les dommages des prefabs des colliders d'attaque
+            NE.GetComponent<GingerbreadAttack>().Damage = attackDamage;
+            NW.GetComponent<GingerbreadAttack>().Damage = attackDamage;
+            SE.GetComponent<GingerbreadAttack>().Damage = attackDamage;
+            SW.GetComponent<GingerbreadAttack>().Damage = attackDamage;
+        }
+
+
+        private void DetectPlayer()
+        {
+            // on regarde ou est le joueur par rapport au gingerbread
+            float xDiff = player.transform.position.x - transform.position.x;
+            float yDiff = player.transform.position.y - transform.position.y;
+            //en bas a gauche 
+            if (xDiff < 0 && yDiff < 0)
+            {
+                attackDirection = AttackDirection.SouthWest;
+            }
+            //en bas a droite
+            if (xDiff > 0 && yDiff < 0)
+            {
+                attackDirection = AttackDirection.SouthEast;
+            }
+            //en haut a gauche
+            if (xDiff < 0 && yDiff > 0)
+            {
+                attackDirection = AttackDirection.NorthWest;
+            }
+            //en haut a droite
+            if (xDiff > 0 && yDiff > 0)
+            {
+                attackDirection = AttackDirection.NorthEast;
+            }
+        }
         void Move()
         {
-            if (Vector2.Distance(transform.position, player.transform.position) > attackDistance)
+            if (Vector2.Distance(transform.position, player.transform.position) > minimumDistance)
             {
-                rb.velocity = (player.transform.position - transform.position).normalized * moveSpeed;
-                attackRange = false;
+                rb.velocity = (player.transform.position - transform.position).normalized * (moveSpeed);
+                isInAttackRange = false;
             }
             else
             {
                 rb.velocity = Vector2.zero;
-                attackRange = true;
+                isInAttackRange = true;
             }
         }
-
-        void Attack()
+        private void Attack()
         {
-            if (attackRange == true && canAttack)
+            if (isInAttackRange == true && canAttack == true)
             {
-                Debug.Log("Gingerbread attack !");
-                StartCoroutine(AttackCoroutine());
+                switch (attackDirection)
+                {
+                    //ici on set active les colliders d'attque correspondant a la bonne position relative du joueur
+                    case AttackDirection.NorthEast:
+                        {
+                            NE.SetActive(true);
+                            //Debug.Log("NE");
+                            break;
+                        }
+                    case AttackDirection.NorthWest:
+                        {
+                            NW.SetActive(true);
+                            //Debug.Log("NW");
+                            break;
+                        }
+                    case AttackDirection.SouthEast:
+                        {
+                            SE.SetActive(true);
+                            //Debug.Log("SE");
+                            break;
+                        }
+                    case AttackDirection.SouthWest:
+                        {
+                            SW.SetActive(true);
+                            //Debug.Log("SW");
+                            break;
+                        }
+                    default: { break; }
+                }
+                canAttack = false;
+
+                StartCoroutine(CooldownAttack());
             }
+
         }
 
 
 
-        IEnumerator AttackCoroutine()
+        //coroutine de cooldown
+        IEnumerator CooldownAttack()
         {
-            canAttack = false;
-            yield return new WaitForSeconds(attackCooldown);
+            //Debug.Log("willAttack");
+            yield return new WaitForSecondsRealtime(3f);//attackCooldown
             canAttack = true;
+            //Debug.Log("AttackCouldown");
         }
     }
 }

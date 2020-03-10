@@ -11,6 +11,12 @@ namespace GameManagement
     public class GameManager : Singleton<GameManager>
     {
         #region Player Variable
+
+        #region Health
+        public int playerHealth;
+        public int playerHealthMax;
+        #endregion
+
         #endregion
 
         #region Economic Variable and Object
@@ -34,18 +40,18 @@ namespace GameManagement
         }
 
 
-        void Update()
-        {
-
-        }
-
-
 
 
         //Initialisation de la valeur des différentes variables
         void GameInitialisation()
         {
+            #region Player
+            playerHealth = playerHealthMax;
+            #endregion
+
+            #region Economic
             CoinOwned = 0;
+            #endregion
         }
 
     }

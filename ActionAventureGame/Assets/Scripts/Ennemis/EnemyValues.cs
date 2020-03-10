@@ -5,6 +5,12 @@ using Player;
 
 namespace Ennemy
 {
+
+    /// <summary>
+    /// Louis Lefebvre
+    /// 
+    ///  | Valeurs communes à tous les ennemis
+    /// </summary>
     public class EnemyValues : MonoBehaviour
     {
         #region Component
@@ -23,7 +29,7 @@ namespace Ennemy
         #endregion
 
         #region Attack
-        public float attackDamage;
+        public int attackDamage;
         public float attackCooldown;
         public bool canAttack = true;
         public bool isAttacking = false;
