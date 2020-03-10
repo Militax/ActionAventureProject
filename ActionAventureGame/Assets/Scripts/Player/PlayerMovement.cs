@@ -12,9 +12,9 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
         public float moveSpeed = 5f;
-
+        
         Rigidbody2D rb;
-        Vector2 movement;
+        Vector3 movement;
 
 
 
@@ -22,6 +22,7 @@ namespace Player
         {
             //Recuperation du rigidbody du player
             rb = GetComponent<Rigidbody2D>();
+            
         }
         
         void Update()
@@ -33,9 +34,9 @@ namespace Player
 
         private void FixedUpdate()
         {
-            //On deplace le rigidbody en fonction des valeurs etablies
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-            rb.velocity = (transform.position - transform.position).normalized * moveSpeed;
+            
+            
+            transform.position += movement.normalized * moveSpeed * Time.deltaTime;
         }
     }
 }
