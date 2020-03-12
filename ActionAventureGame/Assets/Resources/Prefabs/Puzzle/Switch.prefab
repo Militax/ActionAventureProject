@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1311200465431905095}
   - component: {fileID: 1311200465431905092}
   m_Layer: 0
-  m_Name: MTD_Switch
+  m_Name: Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +139,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.260766, y: 2.2721243}
+  m_Size: {x: 1.719579, y: 1.6176631}
   m_EdgeRadius: 0
 --- !u!114 &1311200465431905092
 MonoBehaviour:

@@ -413,6 +413,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WindPowerPrefab: {fileID: 9119314185715129535, guid: 1f0939e5531ca5346b483cd4ff8cdebf,
     type: 3}
+  FrozenPowerPrefab: {fileID: 2769751377965352014, guid: 5e24d77746e72304798f98936e68eea9,
+    type: 3}
+  PowerPowerPrefab: {fileID: 8912393836816879852, guid: de764d2dce6462349b7bae6f5e5d7dbb,
+    type: 3}
   topPoint: {fileID: 1575053176}
   downPoint: {fileID: 545456093}
   leftPoint: {fileID: 1030108656}
