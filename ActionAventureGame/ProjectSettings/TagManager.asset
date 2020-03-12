@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - "\xE9p\xE9e"
+  - Bullet
   layers:
   - Default
   - TransparentFX
