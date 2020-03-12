@@ -150,7 +150,6 @@ namespace Player
             yield return new WaitForSeconds(cooldown);
             isAttacking = false;
             canAttack = true;
-            Debug.Log("fhadh");
         }
     }
 

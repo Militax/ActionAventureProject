@@ -16,6 +16,14 @@ namespace GameManagement
         public int playerHealth;
         public int playerHealthMax;
         #endregion
+        #region Power
+        public int powerState;
+        /*
+        1.WindWave
+        2.FrozenWave
+        3.PowerWave
+        */
+        #endregion
 
         #endregion
 
@@ -46,11 +54,16 @@ namespace GameManagement
         void GameInitialisation()
         {
             #region Player
+
             playerHealth = playerHealthMax;
+            powerState = 1;
+
             #endregion
 
             #region Economic
+
             CoinOwned = 0;
+
             #endregion
         }
 
