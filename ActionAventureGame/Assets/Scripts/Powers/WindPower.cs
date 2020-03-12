@@ -12,11 +12,15 @@ namespace Power
     /// </summary>
     public class WindPower : MonoBehaviour
     {
+
+        #region Variables
         public float duration;
         public float power;
 
         Rigidbody2D rb;
         public Vector2 WaveDirection = new Vector2(0,0); //Direction du tir
+        #endregion
+
 
         void Start()
         {//Quand l'objet s'instanci

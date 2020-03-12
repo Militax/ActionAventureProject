@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Player;
+using Power;
 
 namespace Ennemy
 {
@@ -29,7 +30,11 @@ namespace Ennemy
         private bool canAttack = true;
         private AttackDirection attackDirection;
         [SerializeField] private GameObject NE, NW, SE, SW;
+        bool canMove = true;
         #endregion
+
+        public float windEffectDuration;
+        public float windEffectSlowdown;
 
         #endregion
 
@@ -37,15 +42,24 @@ namespace Ennemy
         {
             OnStart();
             Initialisation();
-        }
-        
+        } 
         void Update()
         {
-            Move();
+            if(canMove)
+            {
+                Move();
+            }
             DetectPlayer();
             Attack();
         }
 
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("WindWave"))
+            {
+                StartCoroutine(WindEffect(other));
+            }
+        }
 
 
         void Initialisation()
@@ -62,7 +76,7 @@ namespace Ennemy
             SW.GetComponent<GingerbreadAttack>().Damage = attackDamage;
         }
 
-
+        #region Fonctions
         private void DetectPlayer()
         {
             // on regarde ou est le joueur par rapport au gingerbread
@@ -142,8 +156,19 @@ namespace Ennemy
 
         }
 
+        #endregion
 
 
+        //Temps ou l'ennemi est repoussé
+        IEnumerator WindEffect(Collider2D collider)
+        {
+            Debug.Log("Debut");
+            canMove = false;
+            rb.velocity = collider.GetComponent<Rigidbody2D>().velocity / windEffectSlowdown;
+            yield return new WaitForSeconds(windEffectDuration);
+            canMove = true;
+            Debug.Log("Fin");
+        }
         //coroutine de cooldown
         IEnumerator CooldownAttack()
         {

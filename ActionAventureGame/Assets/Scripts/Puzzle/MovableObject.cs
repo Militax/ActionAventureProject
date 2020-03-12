@@ -13,7 +13,7 @@ namespace Puzzle
     public class MovableObject : MonoBehaviour
     {
         public float duration;
-        public float speed;
+        public float slowdown;
 
         Rigidbody2D rb;
         public bool isMoving;
@@ -29,7 +29,7 @@ namespace Puzzle
         {
             if(other.CompareTag("WindWave") && !isMoving)
             {
-                rb.velocity = other.GetComponent<Rigidbody2D>().velocity;
+                rb.velocity = other.GetComponent<Rigidbody2D>().velocity / slowdown;
                 StartCoroutine(moveDuration());
             }
         }
