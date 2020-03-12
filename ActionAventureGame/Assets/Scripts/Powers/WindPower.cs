@@ -4,6 +4,12 @@ using UnityEngine;
 
 namespace Power
 {
+
+    /// <summary>
+    /// Matis Duperray
+    /// 
+    ///  | Représente l'évolution de la vague dans le temps et sur une distance établie
+    /// </summary>
     public class WindPower : MonoBehaviour
     {
         public float duration;
@@ -22,15 +28,12 @@ namespace Power
         {            
             //Fait avancer la vague en fonction de (DIRECTION * FORCE)
             rb.velocity = WaveDirection * (power*100) * Time.fixedDeltaTime;
-            Debug.Log("Test");
-            Debug.Log(WaveDirection);
         }
 
 
         //Durée de vie de la vague
         IEnumerator PowerDuration()
         {
-            //yield return new WaitForEndOfFrame();
             yield return new WaitForSeconds(duration);
             Destroy(gameObject);
         }

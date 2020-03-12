@@ -156,8 +156,7 @@ MonoBehaviour:
   stateOne: {fileID: 1311200464337795673}
   stateTwo: {fileID: 1311200465691625299}
   isReversible: 1
-  stateOneActive: 1
-  stateTwoActive: 0
+  canSwitch: 0
 --- !u!1 &1311200465691625299
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1311200465691625298
 Transform:
   m_ObjectHideFlags: 0

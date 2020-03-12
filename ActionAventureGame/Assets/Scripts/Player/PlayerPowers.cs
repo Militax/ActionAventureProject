@@ -5,13 +5,14 @@ using Power;
 using GameManagement;
 
 
-/// <summary>
-/// Matis Duperray
-/// 
-/// Script qui attribue une direction et invoque le pouvoir du vent
-/// </summary>
 namespace Player
 {
+
+    /// <summary>
+    /// Matis Duperray
+    /// 
+    /// Script qui attribue une direction et invoque le pouvoir du vent
+    /// </summary>
     public class PlayerPowers : MonoBehaviour
     {
         #region Variables

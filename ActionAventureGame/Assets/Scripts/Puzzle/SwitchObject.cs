@@ -27,6 +27,7 @@ namespace Puzzle
             //On vérifie que c'est bien la vague qui touche l'objet
             if (other.CompareTag("WindWave") && canSwitch)
             {
+                Debug.Log("WTF");
                 //Si l'objet est en etat 1, on le passe en etat 2
                 if (stateOne.activeSelf)
                 {
