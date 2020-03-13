@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameManagement;
 
 namespace Puzzle
 {
@@ -12,6 +13,8 @@ namespace Puzzle
     /// </summary>
     public class MovableObject : MonoBehaviour
     {
+        public int powerStateRequest;
+
         public float duration;
         public float slowdown;
 
@@ -27,7 +30,7 @@ namespace Puzzle
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            if(other.CompareTag("WindWave") && !isMoving)
+            if(other.CompareTag("WindWave") && !isMoving && GameManager.Instance.powerState >= powerStateRequest)
             {
                 rb.velocity = other.GetComponent<Rigidbody2D>().velocity / slowdown;
                 StartCoroutine(moveDuration());
