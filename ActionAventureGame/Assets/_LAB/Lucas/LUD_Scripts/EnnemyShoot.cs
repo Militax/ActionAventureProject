@@ -32,7 +32,8 @@ public class EnnemyShoot : MonoBehaviour
     {
         GameObject Bullet = Instantiate(EnnemyShot, gameObject.transform.position, Quaternion.identity);
         Bullet.AddComponent<Rigidbody2D>();
+        
         Bullet.GetComponent<Rigidbody2D>().AddForce(ShotPos * speed, ForceMode2D.Impulse);
-            
+        Bullet.GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 }

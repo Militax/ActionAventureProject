@@ -22,5 +22,9 @@ public class EnnemyHp : MonoBehaviour
         {
             HP -= 5;
         }
+        if (collision.tag == "Bullet")
+        {
+            HP -= 1;
+        }
     }
 }
