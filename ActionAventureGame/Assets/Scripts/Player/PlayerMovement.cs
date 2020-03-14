@@ -14,7 +14,7 @@ namespace Player
         public float moveSpeed = 5f;
         
         Rigidbody2D rb;
-        Vector3 movement;
+        Vector2 movement;
 
 
 
@@ -36,7 +36,7 @@ namespace Player
         {
             
             
-            transform.position += movement.normalized * moveSpeed * Time.deltaTime;
+            rb.velocity = movement.normalized * (moveSpeed*50) * Time.deltaTime;
         }
     }
 }
