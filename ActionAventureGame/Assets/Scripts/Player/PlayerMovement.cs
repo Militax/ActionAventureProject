@@ -12,7 +12,7 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
         public float moveSpeed = 5f;
-        
+
         Rigidbody2D rb;
         Vector2 movement;
 
@@ -22,9 +22,9 @@ namespace Player
         {
             //Recuperation du rigidbody du player
             rb = GetComponent<Rigidbody2D>();
-            
+
         }
-        
+
         void Update()
         {
             //Les valeurs du vecteur sont celles des valeurs des axes d'input
@@ -34,8 +34,8 @@ namespace Player
 
         private void FixedUpdate()
         {
-            
-            
+
+
             rb.velocity = movement.normalized * (moveSpeed*50) * Time.deltaTime;
         }
     }
