@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3269822780076973322}
   - component: {fileID: 3269822780076973321}
   - component: {fileID: 4209374102254760860}
+  - component: {fileID: 855045325}
   m_Layer: 0
   m_Name: Gingerbread
   m_TagString: Untagged
@@ -31,10 +32,10 @@ Transform:
   m_LocalPosition: {x: 1.878, y: -1.119, z: 0}
   m_LocalScale: {x: 7.4064913, y: 7.5922422, z: 1}
   m_Children:
-  - {fileID: 3269822781275988282}
-  - {fileID: 3269822780676563024}
   - {fileID: 3269822781144900883}
+  - {fileID: 3269822781275988282}
   - {fileID: 3269822780415710643}
+  - {fileID: 3269822780676563024}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -122,7 +123,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0006165728, y: -0.00090212}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -133,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.05}
+  m_Size: {x: 0.09080796, y: 0.09253538}
   m_EdgeRadius: 0.05
 --- !u!114 &4209374102254760860
 MonoBehaviour:
@@ -148,21 +149,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  maximumHealth: 3
-  health: 3
-  isAlive: 1
   moveSpeed: 3
-  attackDamage: 1
-  attackCooldown: 1
-  canAttack: 1
+  aggroZone: 7
+  attackDistance: 1.5
   isAttacking: 0
-  minimumDistance: 1
-  NE: {fileID: 3269822781275988283}
-  NW: {fileID: 3269822781144900884}
-  SE: {fileID: 3269822780676563025}
-  SW: {fileID: 3269822780415710644}
-  windEffectDuration: 0.2
-  windEffectSlowdown: 1.5
+--- !u!114 &855045325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269822780076973326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2020b86aedb11254cb2b51d600c7ba1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  attackCooldown: 2
+  damage: 1
+  NWcollider: {fileID: 3269822781144900882}
+  NEcollider: {fileID: 3269822781275988281}
+  SWcollider: {fileID: 3269822780415710642}
+  SEcollider: {fileID: 3269822780676562991}
 --- !u!1 &3269822780415710644
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3269822780415710643}
   - component: {fileID: 3269822780415710642}
-  - component: {fileID: 2585619774321986783}
+  - component: {fileID: 2101831571}
   m_Layer: 0
   m_Name: SouthWest
   m_TagString: Untagged
@@ -193,7 +202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3269822780076973323}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3269822780415710642
 BoxCollider2D:
@@ -221,7 +230,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.15}
   m_EdgeRadius: 0
---- !u!114 &2585619774321986783
+--- !u!114 &2101831571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,9 +239,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3269822780415710644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2020b86aedb11254cb2b51d600c7ba1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 34fff7ab8bef9414b976d4f97a8470c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 0.2
 --- !u!1 &3269822780676563025
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3269822780676563024}
   - component: {fileID: 3269822780676562991}
-  - component: {fileID: 6291223940747633038}
+  - component: {fileID: 273013009}
   m_Layer: 0
   m_Name: SouthEast
   m_TagString: Untagged
@@ -263,7 +273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3269822780076973323}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3269822780676562991
 BoxCollider2D:
@@ -291,7 +301,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.15}
   m_EdgeRadius: 0
---- !u!114 &6291223940747633038
+--- !u!114 &273013009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,9 +310,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3269822780676563025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2020b86aedb11254cb2b51d600c7ba1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 34fff7ab8bef9414b976d4f97a8470c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 0.2
 --- !u!1 &3269822781144900884
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3269822781144900883}
   - component: {fileID: 3269822781144900882}
-  - component: {fileID: 7684950887199518082}
+  - component: {fileID: 1173073348}
   m_Layer: 0
   m_Name: NorthWest
   m_TagString: Untagged
@@ -333,7 +344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3269822780076973323}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3269822781144900882
 BoxCollider2D:
@@ -361,7 +372,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.15}
   m_EdgeRadius: 0
---- !u!114 &7684950887199518082
+--- !u!114 &1173073348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,9 +381,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3269822781144900884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2020b86aedb11254cb2b51d600c7ba1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 34fff7ab8bef9414b976d4f97a8470c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 0.2
 --- !u!1 &3269822781275988283
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3269822781275988282}
   - component: {fileID: 3269822781275988281}
-  - component: {fileID: 1675453434206273683}
+  - component: {fileID: 1363419852}
   m_Layer: 0
   m_Name: NorthEast
   m_TagString: Untagged
@@ -403,7 +415,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3269822780076973323}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3269822781275988281
 BoxCollider2D:
@@ -431,7 +443,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.15}
   m_EdgeRadius: 0
---- !u!114 &1675453434206273683
+--- !u!114 &1363419852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -440,6 +452,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3269822781275988283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2020b86aedb11254cb2b51d600c7ba1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 34fff7ab8bef9414b976d4f97a8470c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 0.2
