@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coin
-  - "\xE9p\xE9e"
-  - Bullet
+  - WindWave
+  - Sword
+  - IceBullet
   layers:
   - Default
   - TransparentFX

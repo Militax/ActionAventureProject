@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameManagement;
 
 namespace Ennemy
 {
@@ -13,9 +14,19 @@ namespace Ennemy
     public class EnemyHealth : MonoBehaviour
     {
         #region Variables
-        public float maximumHealth;
+        public string ennemyType;
+        /*
+        1.Gingerbread
+        2.Snowman
+        3.Chat
+         */
+
         public float health;
+        public float maximumHealth;
+        public float safeTime;
         public bool isAlive = true;
+
+        bool canTakeDamage = true;
         #endregion
 
         void Start()
@@ -32,9 +43,15 @@ namespace Ennemy
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("IceBullet"))
+            if (other.CompareTag("Sword") && ennemyType != ("Snowman") && canTakeDamage)
+            {
+                health -= GameManager.Instance.swordDamage;
+                StartCoroutine(SafeCooldown());
+            }
+            if (other.CompareTag("IceBullet") && canTakeDamage)
             {
                 health--;
+                StartCoroutine(SafeCooldown());
             }
         }
 
@@ -43,6 +60,12 @@ namespace Ennemy
         {
             isAlive = false;
             Destroy(gameObject);
+        }
+        IEnumerator SafeCooldown()
+        {
+            canTakeDamage = false;
+            yield return new WaitForSeconds(safeTime);
+            canTakeDamage = true;
         }
     }
 }

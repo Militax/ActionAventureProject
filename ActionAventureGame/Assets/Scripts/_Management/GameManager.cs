@@ -24,6 +24,9 @@ namespace GameManagement
         3.PowerWave
         */
         #endregion
+        #region Damages
+        public int swordDamage;
+        #endregion
 
         #endregion
 
@@ -57,6 +60,8 @@ namespace GameManagement
 
             playerHealth = playerHealthMax;
             powerState = 1;
+
+            swordDamage = 1;
 
             #endregion
 
