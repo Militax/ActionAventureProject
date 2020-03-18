@@ -50,8 +50,13 @@ namespace Ennemy
             }
             if (other.CompareTag("IceBullet") && canTakeDamage)
             {
-                health--;
-                StartCoroutine(SafeCooldown());
+                if(other.GetComponent<IceBullet>().isOut)//La balle est partie du Snowman
+                {
+                    Debug.Log("Hit");
+                    health--;
+                    Destroy(other.gameObject);
+                    StartCoroutine(SafeCooldown());
+                }
             }
         }
 

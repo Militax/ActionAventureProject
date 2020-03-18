@@ -8,6 +8,8 @@ TagManager:
   - WindWave
   - Sword
   - IceBullet
+  - Bullet
+  - Ennemy
   layers:
   - Default
   - TransparentFX

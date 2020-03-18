@@ -10,11 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6716102325986113105}
   - component: {fileID: 6716102325986113106}
+  - component: {fileID: 8996176885942682499}
   - component: {fileID: 6716102325986113107}
   - component: {fileID: 6716102325986113104}
+  - component: {fileID: 1038720884}
   m_Layer: 0
   m_Name: SnowMan
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +86,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &8996176885942682499
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6716102325986113110}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &6716102325986113107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -127,6 +150,20 @@ MonoBehaviour:
   maximumHealth: 3
   safeTime: 1
   isAlive: 1
+--- !u!114 &1038720884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6716102325986113110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92bdae9116e96744080b95c258c740dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windEffectSlowdown: 5
+  windEffectDuration: 0.2
 --- !u!1 &6716102326257001572
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +211,7 @@ MonoBehaviour:
   player: {fileID: 0}
   iceBulletPrefab: {fileID: 4897522390217860516, guid: 1767680840017fe479ac0cc07c702675,
     type: 3}
-  cooldown: 1
+  cooldown: 2
 --- !u!58 &6716102326257001574
 CircleCollider2D:
   m_ObjectHideFlags: 0
