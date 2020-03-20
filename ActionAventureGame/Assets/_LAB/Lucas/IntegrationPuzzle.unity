@@ -18693,6 +18693,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &674007129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 674007131}
+  - component: {fileID: 674007130}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &674007130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674007129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35ffd0d55697a0f41ac81532d6660be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ennemi: {fileID: 3269822780076973326, guid: 130d55885f5e8e845a9b77fe21f48238, type: 3}
+  linkedInput: {fileID: 1214206817}
+  player: {fileID: 1527798889}
+--- !u!4 &674007131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674007129}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.42, y: 10.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &674747512
 GameObject:
   m_ObjectHideFlags: 0
@@ -32300,6 +32346,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1214206817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1311200465691625299, guid: a21113223342ef843b0fa9ae889eb8ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 756979969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1215906240
 GameObject:
   m_ObjectHideFlags: 0
@@ -41057,6 +41109,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1527798889 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8883492670370414281, guid: 84916fd00f6d983439a610aa9b4978e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1125578674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d044b4e276d9ffb48bbbae3d5bf87078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1528009219
 GameObject:
   m_ObjectHideFlags: 0
@@ -55500,6 +55564,11 @@ PrefabInstance:
     - target: {fileID: 3030151162997074350, guid: b3b4a076fbf8ccc48843f6e62c761c2e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995329010106399082, guid: b3b4a076fbf8ccc48843f6e62c761c2e,
+        type: 3}
+      propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
