@@ -9,6 +9,8 @@ TagManager:
   - Sword
   - IceBullet
   - Bullet
+  - WindWave
+  - Box
   - Ennemy
   layers:
   - Default
