@@ -12,11 +12,13 @@ GameObject:
   - component: {fileID: 3269822780076973324}
   - component: {fileID: 3269822780076973322}
   - component: {fileID: 3269822780076973321}
+  - component: {fileID: 1495993110103954679}
   - component: {fileID: 4209374102254760860}
   - component: {fileID: 855045325}
+  - component: {fileID: 1973736818}
   m_Layer: 0
   m_Name: Gingerbread
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,6 +138,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.09080796, y: 0.09253538}
   m_EdgeRadius: 0.05
+--- !u!114 &1495993110103954679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269822780076973326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0e57f387b47634f894aff286f1d7cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ennemyType: Gingerbread
+  health: 1
+  maximumHealth: 1
+  safeTime: 1
+  isAlive: 1
 --- !u!114 &4209374102254760860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +171,7 @@ MonoBehaviour:
   moveSpeed: 3
   aggroZone: 7
   attackDistance: 1.5
+  canMove: 0
   isAttacking: 0
 --- !u!114 &855045325
 MonoBehaviour:
@@ -172,6 +192,20 @@ MonoBehaviour:
   NEcollider: {fileID: 3269822781275988281}
   SWcollider: {fileID: 3269822780415710642}
   SEcollider: {fileID: 3269822780676562991}
+--- !u!114 &1973736818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269822780076973326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92bdae9116e96744080b95c258c740dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windEffectSlowdown: 1
+  windEffectDuration: 1
 --- !u!1 &3269822780415710644
 GameObject:
   m_ObjectHideFlags: 0

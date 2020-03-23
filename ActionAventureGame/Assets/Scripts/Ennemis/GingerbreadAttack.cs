@@ -119,8 +119,7 @@ namespace Ennemy
                 default: { break; }
             }
 
-
-            yield return new WaitForSeconds(attackCooldown);//Cooldown de l'attaque
+            yield return new WaitForSeconds(attackCooldown + NEcollider.GetComponent<GingerbreadAttackZone>().duration);//Cooldown de l'attaque + la durée de l'attaque
             canAttack = true;//L'ennemi peut de nouveau frapper
             GetComponent<GingerbreadMovement>().isAttacking = false;//l'ennemi peut de nouveau bouger
         }

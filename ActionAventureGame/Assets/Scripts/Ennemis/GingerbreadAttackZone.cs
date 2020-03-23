@@ -42,17 +42,17 @@ namespace Ennemy
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("Enter");
             if (other.CompareTag("Player"))
             {
+                Debug.Log("Enter");
                 isInZone = true;
             }
         }
         private void OnTriggerExit2D(Collider2D other)
         {
-            Debug.Log("Exit");
             if (other.CompareTag("Player"))
             {
+                Debug.Log("Exit");
                 isInZone = false;
             }
         }
