@@ -12,6 +12,7 @@ TagManager:
   - WindWave
   - Box
   - Ennemy
+  - Wall
   layers:
   - Default
   - TransparentFX

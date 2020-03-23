@@ -35,6 +35,7 @@ namespace Puzzle
                 rb.velocity = other.GetComponent<Rigidbody2D>().velocity / slowdown;
                 StartCoroutine(moveDuration());
             }
+
         }
 
 
