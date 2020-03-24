@@ -22,10 +22,10 @@ namespace Ennemy
         public int damage;
 
         #region Colliders
-        public Collider2D NWcollider;
-        public Collider2D NEcollider; 
-        public Collider2D SWcollider;
-        public Collider2D SEcollider;
+        public GingerbreadAttackZone NWcollider;
+        public GingerbreadAttackZone NEcollider; 
+        public GingerbreadAttackZone SWcollider;
+        public GingerbreadAttackZone SEcollider;
         #endregion
 
         float attackRange;
@@ -98,22 +98,22 @@ namespace Ennemy
                 //ici on set active les colliders d'attaque correspondant a la bonne position relative du joueur
                 case AttackDirection.NorthEast:
                     {
-                        NEcollider.enabled = true;
+                        NEcollider.attackIsAsked = true;
                         break;
                     }
                 case AttackDirection.NorthWest:
                     {
-                        NWcollider.enabled = true;
+                        NWcollider.attackIsAsked = true;
                         break;
                     }
                 case AttackDirection.SouthEast:
                     {
-                        SEcollider.enabled = true;
+                        SEcollider.attackIsAsked = true;
                         break;
                     }
                 case AttackDirection.SouthWest:
                     {
-                        SWcollider.enabled = true;
+                        SWcollider.attackIsAsked = true;
                         break;
                     }
                 default: { break; }
