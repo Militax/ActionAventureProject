@@ -10,6 +10,8 @@ public class pressureplatePlayer : MonoBehaviour
     public GameObject eventObject;
     private SpriteRenderer spr;
     public Vector3 eventPosition;
+    public GameObject ActivateEvent;
+    public GameObject DeActivateEvent;
     
     [Serializable] public class Combination
     {
@@ -52,6 +54,8 @@ public class pressureplatePlayer : MonoBehaviour
                     Destroy(instance);
                 Debug.Log(String.Format("this: {0} vs {1}", item.colliderTag, Tag));
                 spr.color = (active ? item.active : item.inactive);
+                ActivateEvent.SetActive(true);
+                DeActivateEvent.SetActive(false);
                 break;
             }
         }
