@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class doubleSwiches : MonoBehaviour
 {
-    bool isactive = false;
+    public bool isactive = false;
     public doubleSwiches other;
     private SpriteRenderer spr;
     //public GameObject active;
