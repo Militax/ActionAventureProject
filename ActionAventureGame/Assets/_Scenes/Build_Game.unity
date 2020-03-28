@@ -1323,6 +1323,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2104,6 +2109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gingerbread (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
@@ -5304,6 +5314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gingerbread (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
@@ -16026,6 +16041,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16202,6 +16222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16264,6 +16289,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
     type: 3}
   m_PrefabInstance: {fileID: 687983256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &691944365
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7846345640819962733, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_Name
+      value: respawn point
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846345640819962735, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846345640819962735, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846345640819962735, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846345640819962735, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846345640819962735, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846345640819962735, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846345640819962735, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846345640819962735, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846345640819962735, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846345640819962735, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846345640819962735, guid: 692799b9b9a838e4ca6179d9aa951d53,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7846345640819962734, guid: 692799b9b9a838e4ca6179d9aa951d53, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 692799b9b9a838e4ca6179d9aa951d53, type: 3}
+--- !u!1 &691944366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7846345640819962733, guid: 692799b9b9a838e4ca6179d9aa951d53,
+    type: 3}
+  m_PrefabInstance: {fileID: 691944365}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &700525008
 GameObject:
@@ -17043,6 +17144,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17680,6 +17786,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18196,6 +18307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gingerbread (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
@@ -19799,6 +19915,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20105,6 +20226,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gingerbread (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
@@ -21089,6 +21215,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21389,6 +21520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gingerbread (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
@@ -23771,6 +23907,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24071,6 +24212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gingerbread (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
@@ -24743,6 +24889,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24813,38 +24964,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 545456093, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 612599743, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 783822313, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030108656, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1157221825, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516100111, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516100111, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 1575053176, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.15
-      objectReference: {fileID: 0}
+    - target: {fileID: 1103522680, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 691944366}
+    - target: {fileID: 1103522680, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
+      propertyPath: DeathState
+      value: 
+      objectReference: {fileID: 2299627288841480003, guid: 03db50bf7a7d7b54b8aec34dee723d68,
+        type: 3}
     - target: {fileID: 8883492670370414280, guid: 84916fd00f6d983439a610aa9b4978e4,
         type: 3}
       propertyPath: m_Name
@@ -24904,11 +25032,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8883492670479812899, guid: 84916fd00f6d983439a610aa9b4978e4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
@@ -26586,6 +26709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gingerbread (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
@@ -31862,6 +31990,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34053,6 +34186,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35518,6 +35656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gingerbread (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
@@ -37449,6 +37592,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gingerbread (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
@@ -42350,6 +42498,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gingerbread (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -42793,6 +42946,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gingerbread (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
@@ -44162,6 +44320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gingerbread (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110711550277075488, guid: 130d55885f5e8e845a9b77fe21f48238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4110711550277075493, guid: 130d55885f5e8e845a9b77fe21f48238,
         type: 3}
