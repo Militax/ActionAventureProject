@@ -29,7 +29,7 @@ namespace Power
         {//Quand l'objet s'instanci
             rb = GetComponent<Rigidbody2D>();       
             StartCoroutine(PowerDuration());
-            ScaleChange.Set(0, YPerFrame, 0);
+            ScaleChange.Set(0, (YPerFrame/1000), 0);
         }
 
         private void Update()

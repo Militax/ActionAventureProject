@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9119314185715129535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.309, y: -1.163, z: 0}
-  m_LocalScale: {x: 0.72762114, y: 1.5989622, z: 1}
+  m_LocalPosition: {x: 0.3934, y: -1.1506, z: 0}
+  m_LocalScale: {x: 0.119334936, y: 0.26326457, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -118,8 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.3
-  power: 8
-  YPerFrame: 0.025
+  power: 2
+  YPerFrame: 3
   WaveDirection: {x: 0, y: 0}
 --- !u!60 &5601899561618851160
 PolygonCollider2D:

@@ -312,9 +312,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  moveSpeed: 3
-  aggroZone: 7
-  attackDistance: 0.02
+  moveSpeed: 0.9
+  aggroZone: 1
+  attackDistance: 0.25
   canMove: 0
   isAttacking: 0
 --- !u!114 &1471709639289433059

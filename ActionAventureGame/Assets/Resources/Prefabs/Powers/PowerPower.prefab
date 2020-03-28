@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8912393836816879852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.22, y: 0.15, z: 0}
-  m_LocalScale: {x: 0.7276211, y: 1.598962, z: 1}
+  m_LocalScale: {x: 0.1193349, y: 0.2632646, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -118,7 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.3
-  power: 8
+  power: 2
+  YPerFrame: 0
   WaveDirection: {x: 0, y: 0}
 --- !u!60 &5232216221437888779
 PolygonCollider2D:

@@ -29,6 +29,7 @@ namespace GameManagement
         void Update()
         {
             EconomicCanvas();
+            PlayerLifeCanvas();
         }
 
 
