@@ -25033,6 +25033,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8883492670370414285, guid: 84916fd00f6d983439a610aa9b4978e4,
+        type: 3}
+      propertyPath: range
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883492670370414285, guid: 84916fd00f6d983439a610aa9b4978e4,
+        type: 3}
+      propertyPath: speed
+      value: 7.575
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883492670370414285, guid: 84916fd00f6d983439a610aa9b4978e4,
+        type: 3}
+      propertyPath: isAttacking
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84916fd00f6d983439a610aa9b4978e4, type: 3}
 --- !u!1 &1106788420
@@ -36611,7 +36626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkedInput: {fileID: 1250645756}
   openState: {fileID: 1342855705}
-  closeState: {fileID: 1703189882}
+  closeState: {fileID: 786104042}
 --- !u!1 &1707255652
 GameObject:
   m_ObjectHideFlags: 0
