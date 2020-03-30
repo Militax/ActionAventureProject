@@ -267,12 +267,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.1533864, y: 0.4648661}
-      - {x: 0.9888673, y: 1.008309}
-      - {x: 0.49569377, y: 1.1972383}
-      - {x: -0.28205377, y: 1.0165501}
-      - {x: -0.0037118793, y: -0.009758413}
-      - {x: 1.018413, y: -0.27982983}
+    - - {x: 0, y: 0}
+      - {x: 1, y: 0}
+      - {x: 1, y: 1}
+      - {x: 0, y: 1}
 --- !u!114 &3182750862306445507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackduration: 0
 --- !u!1 &2040212549296103510
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,12 +426,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.1533864, y: 0.4648661}
-      - {x: 0.9888673, y: 1.008309}
-      - {x: 0.49569377, y: 1.1972383}
-      - {x: -0.28205377, y: 1.0165501}
-      - {x: -0.0037118793, y: -0.009758413}
-      - {x: 1.018413, y: -0.27982983}
+    - - {x: 0, y: 0}
+      - {x: 1, y: 0}
+      - {x: 1, y: 1}
+      - {x: 0, y: 1}
 --- !u!114 &2754148828793719204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,6 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackduration: 0
 --- !u!1 &5177407641851298390
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,12 +633,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.1533864, y: 0.4648661}
-      - {x: 0.9888673, y: 1.008309}
-      - {x: 0.49569377, y: 1.1972383}
-      - {x: -0.28205377, y: 1.0165501}
-      - {x: -0.0037118793, y: -0.009758413}
-      - {x: 1.018413, y: -0.27982983}
+    - - {x: 0, y: 0}
+      - {x: 1, y: 0}
+      - {x: 1, y: 1}
+      - {x: 0, y: 1}
 --- !u!114 &5512608560518494737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,6 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackduration: 0
 --- !u!1 &7148365195945519826
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,12 +707,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.1533864, y: 0.4648661}
-      - {x: 0.9888673, y: 1.008309}
-      - {x: 0.49569377, y: 1.1972383}
-      - {x: -0.28205377, y: 1.0165501}
-      - {x: -0.0037118793, y: -0.009758413}
-      - {x: 1.018413, y: -0.27982983}
+    - - {x: 0, y: 0}
+      - {x: 1, y: 0}
+      - {x: 1, y: 1}
+      - {x: 0, y: 1}
 --- !u!114 &5748030986427194273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,6 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackduration: 0
 --- !u!1 &7812482197185526445
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +942,7 @@ MonoBehaviour:
   cooldown: 2
   Direction: 0
   ComboCount: 0
+  attackDuration: 0
   isAttacking: 0
   canAttack: 1
 --- !u!1 &8883492670479812898

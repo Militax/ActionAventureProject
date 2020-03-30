@@ -175,7 +175,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -199,7 +199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58962561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.36, y: -10.47, z: -10}
+  m_LocalPosition: {x: 0.252, y: 0.33, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 191187694}
@@ -882,6 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackduration: 0
 --- !u!1001 &576987214713859016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -994,6 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackduration: 0
 --- !u!1001 &1291827048139300667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1815,8 +1817,8 @@ GameObject:
   - component: {fileID: 8202619048867754728}
   - component: {fileID: 6618999629093747560}
   - component: {fileID: 6618999629093747563}
-  - component: {fileID: 6618999629093747567}
   - component: {fileID: 6618999629093747564}
+  - component: {fileID: 6618999629093747565}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1852,6 +1854,30 @@ MonoBehaviour:
   respawnPoint: {fileID: 1246581757}
   DeathState: {fileID: 2299627288841480003, guid: 03db50bf7a7d7b54b8aec34dee723d68,
     type: 3}
+--- !u!114 &6618999629093747565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6618999629093747562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e70110196db8143982a2fdbdd2f01b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabHitboxTopRight: {fileID: 3688901688821334751}
+  prefabHitboxTopLeft: {fileID: 4875129923829559152}
+  prefabHitboxBottomLeft: {fileID: 8364568470271350794}
+  prefabHitboxBottomRight: {fileID: 55782681743364229}
+  range: 0
+  speed: 0
+  cooldown: 3
+  Direction: 0
+  ComboCount: 0
+  attackDuration: 0.2
+  isAttacking: 0
+  canAttack: 1
 --- !u!4 &6618999629093747566
 Transform:
   m_ObjectHideFlags: 0
@@ -1868,29 +1894,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6618999629093747567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6618999629093747562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e70110196db8143982a2fdbdd2f01b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabHitboxTopRight: {fileID: 3688901688821334751}
-  prefabHitboxTopLeft: {fileID: 4875129923829559152}
-  prefabHitboxBottomLeft: {fileID: 8364568470271350794}
-  prefabHitboxBottomRight: {fileID: 55782681743364229}
-  range: 2
-  speed: 50
-  cooldown: 2
-  Direction: 0
-  ComboCount: 0
-  isAttacking: 0
-  canAttack: 1
 --- !u!1001 &7103554062054262878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2072,6 +2075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackduration: 0
 --- !u!1001 &7846345639851942032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2153,6 +2157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackduration: 0
 --- !u!61 &8202619048867754728
 BoxCollider2D:
   m_ObjectHideFlags: 0
