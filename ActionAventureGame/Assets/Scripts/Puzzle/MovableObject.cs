@@ -30,12 +30,22 @@ namespace Puzzle
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            if(other.CompareTag("WindWave") && !isMoving && GameManager.Instance.powerState >= powerStateRequest)
+            if (other.CompareTag("WindWave") && !isMoving && GameManager.Instance.powerState >= powerStateRequest)
             {
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                 rb.velocity = other.GetComponent<Rigidbody2D>().velocity / slowdown;
                 StartCoroutine(moveDuration());
             }
 
+        }
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.collider.tag == "Player")
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+            }
+            
         }
 
 

@@ -114,7 +114,7 @@ namespace Player
         //Créer la vague en fonction de la direction
         void InstantiateWindWave()
         {
-            if (Input.GetKeyDown(KeyCode.Mouse1))//Clique droit
+            if (Input.GetButtonDown("WindPower"))//Clique droit
             {
                 //Instantiation de la vague sur le bon point et dans la bonne direction en fonction du dernier angle enregistré par le joystick
                 switch (lookingAngle)
