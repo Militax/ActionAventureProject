@@ -19,6 +19,20 @@ namespace Boss
         public float fireWaveCooldown;
         bool canShootWave = true;
         #endregion
+        #region LUMIERE
+        public GameObject shieldPrefab;
+        public GameObject lightBulletPrefab;
+        public Transform shieldSpawn;
+        public float lightFireCooldown;
+
+        int shieldLife = 4;
+        float stuntTime = 4;
+        public bool shieldActive = false;
+        public bool isStunt = false;
+        bool isInLightCoroutine = false;
+
+        bool canShootLight = true;
+        #endregion
 
         public Transform shootPoint;
         public GameObject fireBallPrefab;
@@ -43,6 +57,7 @@ namespace Boss
                     break;
 
                 case (3):
+                    LightAttack();
                     break;
 
                 default:
@@ -95,6 +110,49 @@ namespace Boss
             yield return new WaitForSeconds(fireWaveCooldown);
             canShootWave = true;
         }
+        #endregion
+
+
+
+        #region LIGHT ATTACK
+        void LightAttack()
+        {
+            if (!shieldActive && !isStunt)
+            {
+                createBossShield();
+            }
+            if(isStunt && !isInLightCoroutine)
+            {
+                StartCoroutine(bossStunt());
+            }
+            if (!isStunt)
+            {
+                if (canShootLight)
+                {
+                    StartCoroutine(lightFire());
+                }
+            }
+        }
+        void createBossShield()
+        {
+            GameObject shield = Instantiate(shieldPrefab, shieldSpawn.position, shieldSpawn.rotation, transform);
+            shieldActive = true;
+        }
+        IEnumerator bossStunt()
+        {
+            isInLightCoroutine = true;
+            yield return new WaitForSeconds(stuntTime);
+            isInLightCoroutine = false;
+            isStunt = false;
+        }
+        IEnumerator lightFire()
+        {
+            canShootLight = false;
+            GameObject lighBullet = Instantiate(lightBulletPrefab, shootPoint.position, shootPoint.rotation);
+            yield return new WaitForSeconds(lightFireCooldown);
+            canShootLight = true;
+        }
+
         #endregion
     }
 }
