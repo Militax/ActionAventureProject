@@ -53,12 +53,12 @@ namespace Player
 
 
 
-            if (Input.GetButtonDown("Fire1") && isAttacking == false && canAttack == true)
+            if (Input.GetButtonDown("Attack") && isAttacking == false && canAttack == true)
             {
                 Attaque();
                 ComboCount = 1;
             }
-            else if (Input.GetButtonDown("Fire1") && isAttacking == true && canAttack == true)
+            else if (Input.GetButtonDown("Attack") && isAttacking == true && canAttack == true)
             {
                 Attaque();
                 ComboCount += 1;

@@ -25,7 +25,7 @@ namespace Ennemy
         
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("WindWave"))
+            if (other.CompareTag("WindWave") && GetComponent<GingerbreadMovement>().isAffectedByWind == false)
             {
                 StartCoroutine(WindEffect(other));
             }
@@ -33,17 +33,18 @@ namespace Ennemy
 
 
         //Temps ou l'ennemi est repoussé
-        IEnumerator WindEffect(Collider2D collider)
+        IEnumerator WindEffect(Collider2D other)
         {
             switch (ennemyType)
             {
 
                 case ("Gingerbread")://Sur le gingerbread
 
-                    GetComponent<GingerbreadMovement>().canMove = false;//Empeche l'ennemi de bouger
-                    rb.velocity = collider.GetComponent<Rigidbody2D>().velocity / windEffectSlowdown;//Fait reculer l'ennemi
+                    GetComponent<GingerbreadMovement>().isAffectedByWind = true;                 
+                    rb.velocity = other.GetComponent<Rigidbody2D>().velocity / windEffectSlowdown;//Fait reculer l'ennemi
                     yield return new WaitForSeconds(windEffectDuration);
-                    GetComponent<GingerbreadMovement>().canMove = true;//L'ennemi peut rebouger
+                    rb.velocity = Vector2.zero;
+                    GetComponent<GingerbreadMovement>().isAffectedByWind = false;
 
                     break;
 
@@ -56,7 +57,7 @@ namespace Ennemy
 
                     if (GameManager.Instance.powerState == 3)
                     {
-                        rb.velocity = collider.GetComponent<Rigidbody2D>().velocity / windEffectSlowdown;//Fait reculer l'ennemi
+                        rb.velocity = other.GetComponent<Rigidbody2D>().velocity / windEffectSlowdown;//Fait reculer l'ennemi
                         yield return new WaitForSeconds(windEffectDuration);
                         rb.velocity = Vector2.zero;
                     }
