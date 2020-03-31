@@ -13,6 +13,7 @@ namespace GameManagement
         #region Player Variable
 
         #region Health
+        public int DeathCounter;
         public int playerHealth;
         public int playerHealthMax;
         #endregion

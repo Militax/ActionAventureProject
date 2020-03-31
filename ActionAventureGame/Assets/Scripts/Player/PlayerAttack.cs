@@ -31,7 +31,7 @@ namespace Player
         float verticalDelta; //position du joystick sur l'axe vertical
         float horizontalDelta; //position du joystick sur l'axe horizontal
         public float cooldown; //temps entre deux attaques
-        int Direction;
+        public int Direction;
         public int ComboCount = 0;
         #endregion
         #region Bool
@@ -53,12 +53,12 @@ namespace Player
 
 
 
-            if (Input.GetButtonDown("Fire1") && isAttacking == false && canAttack == true)
+            if (Input.GetButtonDown("Attack") && isAttacking == false && canAttack == true)
             {
                 Attaque();
                 ComboCount = 1;
             }
-            else if (Input.GetButtonDown("Fire1") && isAttacking == true && canAttack == true)
+            else if (Input.GetButtonDown("Attack") && isAttacking == true && canAttack == true)
             {
                 Attaque();
                 ComboCount += 1;

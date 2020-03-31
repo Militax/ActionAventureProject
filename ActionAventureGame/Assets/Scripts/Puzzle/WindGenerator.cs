@@ -15,6 +15,7 @@ namespace Puzzle
     {
 
         #region Variables
+        public doubleSwiches input;
         public GameObject linkedInput;
         public string direction;
         public float waveDuration;
@@ -34,7 +35,11 @@ namespace Puzzle
 
         void Update()
         {
-            if (linkedInput.activeSelf)
+            //if (linkedInput.activeSelf)
+            //{
+            //    WaveFire();
+            //}
+            if (input.isactive)
             {
                 WaveFire();
             }
