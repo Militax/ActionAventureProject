@@ -17,5 +17,25 @@ namespace Boss
                 GetComponentInParent<BossComportement>().shieldActive = false;
             }
         }
+
+
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("WindWave"))
+            {
+                Destroy(other.gameObject);
+            }
+        }
+        
+        void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag("LightBullet"))
+            {
+                if (other.GetComponent<LightBall>().isOut == false)
+                {
+                    other.GetComponent<LightBall>().isOut = true;
+                }
+            }
+        }
     }
 }
