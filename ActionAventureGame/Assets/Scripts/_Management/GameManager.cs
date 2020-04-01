@@ -34,10 +34,16 @@ namespace GameManagement
         #region Economic Variable and Object
 
         public int CoinOwned;
+		public int maxCoin;
 
         #endregion
 
+		#region ShopVariable
+		public int bottesState;
 
+
+
+		#endregion
 
 
 
@@ -69,8 +75,15 @@ namespace GameManagement
             #region Economic
 
             CoinOwned = 0;
+			maxCoin = 50;
 
             #endregion
+
+			#region Shop
+
+			bottesState = 0;
+
+			#endregion
         }
 
     }
