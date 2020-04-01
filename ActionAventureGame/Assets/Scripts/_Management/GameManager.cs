@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Management;
+using Player;
 
 namespace GameManagement
 {
@@ -12,7 +13,10 @@ namespace GameManagement
     {
         #region Player Variable
 
+        public PlayerMovement player;
+
         #region Health
+        public int DeathCounter;
         public int playerHealth;
         public int playerHealthMax;
         #endregion

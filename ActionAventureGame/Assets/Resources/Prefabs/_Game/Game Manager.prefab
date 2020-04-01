@@ -44,9 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce33599e508cec4182a7307b3e9a2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 3
-  playerHealthMax: 3
+  DeathCounter: 0
+  playerHealth: 10
+  playerHealthMax: 10
   powerState: 1
+  swordDamage: 0
   CoinOwned: 0
 --- !u!114 &5913522770453334982
 MonoBehaviour:
@@ -60,4 +62,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6b257ea86b768469b0a473804b4e6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: 21300000, guid: b5f8fac15e0bf0b4ab26a7adbe64d13a, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 2a39c9e2125d870448bc10fd87765579, type: 3}
   CoinCount: {fileID: 0}
