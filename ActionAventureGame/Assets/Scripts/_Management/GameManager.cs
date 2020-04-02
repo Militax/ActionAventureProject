@@ -39,9 +39,10 @@ namespace GameManagement
         #endregion
 
 		#region ShopVariable
+
 		public int bottesState;
-
-
+		public int coinState;
+		public int heartState;
 
 		#endregion
 
@@ -74,14 +75,16 @@ namespace GameManagement
 
             #region Economic
 
-            CoinOwned = 0;
-			maxCoin = 50;
+            CoinOwned = 1; 
+			maxCoin = 9;
 
             #endregion
 
 			#region Shop
 
 			bottesState = 0;
+			coinState = 0;
+			heartState = 0;
 
 			#endregion
         }
