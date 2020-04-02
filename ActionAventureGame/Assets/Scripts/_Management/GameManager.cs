@@ -14,6 +14,7 @@ namespace GameManagement
         #region Player Variable
 
         public PlayerMovement player;
+        public bool playerCanMove;
 
         #region Health
         public int DeathCounter;
@@ -61,6 +62,8 @@ namespace GameManagement
         void GameInitialisation()
         {
             #region Player
+
+            playerCanMove = true;
 
             playerHealth = playerHealthMax;
             powerState = 1;

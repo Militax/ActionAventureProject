@@ -36,8 +36,10 @@ namespace Player
         private void FixedUpdate()
         {
 
-
-            rb.velocity = movement.normalized * (moveSpeed*50) * Time.deltaTime;
+            if (GameManager.Instance.playerCanMove)
+            {
+                rb.velocity = movement.normalized * (moveSpeed * 50) * Time.deltaTime;
+            }
         }
     }
 }

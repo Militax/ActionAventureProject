@@ -25,6 +25,11 @@ namespace Boss
             {
                 Destroy(other.gameObject);
             }
+            if (other.CompareTag("LightBullet") && other.GetComponent<LightBall>().isOut)
+            {
+                shieldLife--;
+                Destroy(other.gameObject);
+            }
         }
         
         void OnTriggerExit2D(Collider2D other)

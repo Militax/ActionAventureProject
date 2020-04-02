@@ -911,7 +911,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 0}
-  DeathState: {fileID: 0}
+  DeathState: {fileID: 2299627288841480003, guid: 03db50bf7a7d7b54b8aec34dee723d68,
+    type: 3}
 --- !u!114 &8883492670370414281
 MonoBehaviour:
   m_ObjectHideFlags: 0
