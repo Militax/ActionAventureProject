@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameManagement;
 
 /// <summary>
 /// Matis Duperray
@@ -22,7 +23,7 @@ namespace Player
         {
             //Recuperation du rigidbody du player
             rb = GetComponent<Rigidbody2D>();
-
+            GameManager.Instance.player = this;
         }
 
         void Update()

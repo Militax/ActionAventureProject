@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Management;
+using Player;
 
 namespace GameManagement
 {
@@ -11,6 +12,8 @@ namespace GameManagement
     public class GameManager : Singleton<GameManager>
     {
         #region Player Variable
+
+        public PlayerMovement player;
 
         #region Health
         public int DeathCounter;
