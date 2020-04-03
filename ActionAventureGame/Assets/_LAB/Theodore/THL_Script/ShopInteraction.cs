@@ -7,6 +7,7 @@ using GameManagement;
 public class ShopInteraction : MonoBehaviour 
 {
 	
+
 	// achat de 3 types de bottes
 	public void bottesState()
 	{
