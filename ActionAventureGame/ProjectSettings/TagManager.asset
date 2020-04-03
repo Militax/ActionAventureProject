@@ -13,6 +13,7 @@ TagManager:
   - Box
   - Ennemy
   - Wall
+  - "\xE9p\xE9e"
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,8 @@ TagManager:
   - 
   - 
   - Player
-  - 
-  - 
+  - Switch
+  - Attacks
   - 
   - 
   - 
@@ -49,4 +50,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Plates
+    uniqueID: 1185362785
+    locked: 0
+  - name: Player
+    uniqueID: 1184987655
+    locked: 0
+  - name: Interactables
+    uniqueID: 2298964409
     locked: 0

@@ -23,6 +23,7 @@ namespace Ennemy
         Rigidbody2D rb;
         public bool canMove = false;
         public bool isAttacking = false;
+        public bool isAffectedByWind = false;
         #endregion
 
 
@@ -38,11 +39,12 @@ namespace Ennemy
             }
 
             Movement();
+            Debug.Log(canMove);
         }
 
         void Movement()
         {
-            if (canMove && !isAttacking)
+            if (canMove && !isAttacking && !isAffectedByWind)
             {
                 rb.velocity = (player.transform.position - transform.position).normalized * (moveSpeed);
             }
