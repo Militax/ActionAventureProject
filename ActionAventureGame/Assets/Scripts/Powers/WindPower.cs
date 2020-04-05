@@ -23,8 +23,7 @@ namespace Power
         Rigidbody2D rb;
         public Vector2 WaveDirection = new Vector2(0,0); //Direction du tir
         #endregion
-
-
+        
         void Start()
         {//Quand l'objet s'instanci
             rb = GetComponent<Rigidbody2D>();       
