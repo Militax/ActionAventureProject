@@ -30,7 +30,7 @@ namespace Player
                 TakeDamage();
             }
 
-                if (GameManager.Instance.playerHealth <= 0)
+            if (GameManager.Instance.playerHealth <= 0)
             {
                 animator.SetTrigger("Dead");
                 Instantiate(DeathState, transform.position, Quaternion.identity);

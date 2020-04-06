@@ -409,7 +409,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 2.6666667, y: 2.6666667}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1295,6 +1295,7 @@ MonoBehaviour:
   downLeftPoint: {fileID: 2347475551232868893}
   downRightPoint: {fileID: 2347475552890789805}
   lookingAngle: 
+  animator: {fileID: 0}
 --- !u!1 &2347475552847005794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,6 +1845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  animator: {fileID: 0}
 --- !u!114 &6618999629093747564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1859,6 +1861,7 @@ MonoBehaviour:
   respawnPoint: {fileID: 1246581757}
   DeathState: {fileID: 2299627288841480003, guid: 03db50bf7a7d7b54b8aec34dee723d68,
     type: 3}
+  animator: {fileID: 0}
 --- !u!114 &6618999629093747565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1892,7 +1895,7 @@ Transform:
   m_GameObject: {fileID: 6618999629093747562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.36, y: -10.47, z: 0}
-  m_LocalScale: {x: 6.892244, y: 6.892244, z: 1.8191295}
+  m_LocalScale: {x: 1, y: 1, z: 1.8191295}
   m_Children:
   - {fileID: 8322699406733192540}
   - {fileID: 3320313130355659350}
@@ -2180,7 +2183,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.25}
+    oldSize: {x: 0.625, y: 1.0416666}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
