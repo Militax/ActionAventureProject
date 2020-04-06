@@ -15,7 +15,7 @@ namespace Player
         public float attackduration;
         private void OnEnable()
         {
-            attackduration = GetComponent<PlayerAttack>().attackDuration;
+            attackduration = GetComponentInParent<PlayerAttack>().attackDuration;
             StartCoroutine(deactivate());
         }
 

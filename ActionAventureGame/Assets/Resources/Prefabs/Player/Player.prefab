@@ -237,7 +237,7 @@ Transform:
   m_GameObject: {fileID: 1414820884730677117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1047077708968744948}
   m_RootOrder: 3
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackduration: 0
+  attackduration: 0.2
 --- !u!1 &2040212549296103510
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ Transform:
   m_GameObject: {fileID: 2329986764599153959}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1047077708968744948}
   m_RootOrder: 1
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackduration: 0
+  attackduration: 0.2
 --- !u!1 &5177407641851298390
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +575,7 @@ Transform:
   m_GameObject: {fileID: 6090839389637778856}
   m_LocalRotation: {x: 0, y: -0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1047077708968744948}
   m_RootOrder: 0
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackduration: 0
+  attackduration: 0.2
 --- !u!1 &7148365195945519826
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +649,7 @@ Transform:
   m_GameObject: {fileID: 7148365195945519826}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1047077708968744948}
   m_RootOrder: 2
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8068ad93e3bfbe44b8ee2a612bf91df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackduration: 0
+  attackduration: 0.2
 --- !u!1 &7812482197185526445
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +749,7 @@ GameObject:
   - component: {fileID: 1358456096}
   - component: {fileID: 1358456099}
   - component: {fileID: 1062262859}
+  - component: {fileID: 6990049731087689654}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -984,6 +985,34 @@ MonoBehaviour:
   DeathState: {fileID: 0}
   animator: {fileID: 1358456097}
 --- !u!114 &1062262859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8883492670370414280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0fa66c9126a0ca4eb8933d2feffa9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WindPowerPrefab: {fileID: 9119314185715129535, guid: 1f0939e5531ca5346b483cd4ff8cdebf,
+    type: 3}
+  FrozenPowerPrefab: {fileID: 2769751377965352014, guid: 5e24d77746e72304798f98936e68eea9,
+    type: 3}
+  PowerPowerPrefab: {fileID: 8912393836816879852, guid: de764d2dce6462349b7bae6f5e5d7dbb,
+    type: 3}
+  topPoint: {fileID: 1575053176}
+  downPoint: {fileID: 545456093}
+  leftPoint: {fileID: 1030108656}
+  rightPoint: {fileID: 8883492670479812899}
+  topLeftPoint: {fileID: 1157221825}
+  topRightPoint: {fileID: 783822313}
+  downLeftPoint: {fileID: 612599743}
+  downRightPoint: {fileID: 1516100111}
+  lookingAngle: 
+  animator: {fileID: 1358456097}
+--- !u!114 &6990049731087689654
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
