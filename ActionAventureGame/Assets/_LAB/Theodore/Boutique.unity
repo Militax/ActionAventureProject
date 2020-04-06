@@ -223,6 +223,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2077402419351812654, guid: 0080a4b80d96c9747a2efedd6161e8f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4686697161276044652, guid: 0080a4b80d96c9747a2efedd6161e8f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -285,12 +290,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0080a4b80d96c9747a2efedd6161e8f7, type: 3}
---- !u!1 &936228957 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3117901216382637634, guid: 7a095529616eed940bb1c7fc47c7fb84,
-    type: 3}
-  m_PrefabInstance: {fileID: 1983826939}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1122687011
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,12 +445,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1619174372 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 19771303098826545, guid: 7a095529616eed940bb1c7fc47c7fb84,
-    type: 3}
-  m_PrefabInstance: {fileID: 1983826939}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1983826939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -567,26 +560,6 @@ PrefabInstance:
     - target: {fileID: 1165209760732583382, guid: 7a095529616eed940bb1c7fc47c7fb84,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478273013597751191, guid: 7a095529616eed940bb1c7fc47c7fb84,
-        type: 3}
-      propertyPath: emptyHearth6
-      value: 
-      objectReference: {fileID: 936228957}
-    - target: {fileID: 5478273013597751191, guid: 7a095529616eed940bb1c7fc47c7fb84,
-        type: 3}
-      propertyPath: emptyHearth7
-      value: 
-      objectReference: {fileID: 1619174372}
-    - target: {fileID: 7616385897125367886, guid: 7a095529616eed940bb1c7fc47c7fb84,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8188971839738547694, guid: 7a095529616eed940bb1c7fc47c7fb84,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
