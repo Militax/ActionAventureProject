@@ -33,6 +33,9 @@ namespace Player
         public float cooldown; //temps entre deux attaques
         public int Direction;
         public int ComboCount = 0;
+        float movespeed;
+        float baseMoveSpeed;
+        public float attackDuration;//durée d'une  attaque
         #endregion
         #region Bool
         public bool isAttacking = false; //état du joueur (attaque/attaque pas)
@@ -46,9 +49,16 @@ namespace Player
         Coroutine myCoroutine;
         #endregion
 
-
+        private void Start()
+        {
+            movespeed = GetComponent<PlayerMovement>().moveSpeed;
+            baseMoveSpeed = movespeed;
+        }
         void Update()
         {
+            GetComponent<PlayerMovement>().moveSpeed = movespeed;
+
+
             AttaqueAIM();
 
 
@@ -90,17 +100,14 @@ namespace Player
             {
                 prefabHitboxBottomLeft.SetActive(true);
             }
-            Attaque_Movement();
+            StartCoroutine(Attaque_Movement());
             myCoroutine = StartCoroutine(Attack_Cooldown());
         }
-        void Attaque_Movement()
+        IEnumerator Attaque_Movement()
         {
-            if (attaqueDash == Vector3.zero)
-            {
-                attaqueDash = new Vector3(1, 1, 0);
-            }
-            transform.position += attaqueDash * speed * Time.deltaTime;
-
+            movespeed = baseMoveSpeed * 2;
+            yield return new WaitForSeconds(attackDuration);
+            movespeed = baseMoveSpeed;
         }
         void AttaqueAIM()
         {
