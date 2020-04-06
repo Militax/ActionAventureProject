@@ -14,6 +14,7 @@ TagManager:
   - Ennemy
   - Wall
   - "\xE9p\xE9e"
+  - LightBullet
   layers:
   - Default
   - TransparentFX

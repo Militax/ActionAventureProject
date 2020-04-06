@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 305916382740046317}
   - component: {fileID: 3617393793440078060}
   - component: {fileID: 305916382740046316}
+  - component: {fileID: 2633889303878783061}
   m_Layer: 0
   m_Name: LightBullet
-  m_TagString: IceBullet
+  m_TagString: LightBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,3 +121,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &2633889303878783061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305916382740046318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778603619ba84644e82c969107c7805a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  power: 3
+  damage: 1
+  isOut: 0
