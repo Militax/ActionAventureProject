@@ -921,7 +921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d044b4e276d9ffb48bbbae3d5bf87078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
   animator: {fileID: 0}
 --- !u!114 &8883492670370414285
 MonoBehaviour:
@@ -939,8 +939,8 @@ MonoBehaviour:
   prefabHitboxTopLeft: {fileID: 7148365195945519826}
   prefabHitboxBottomLeft: {fileID: 6090839389637778856}
   prefabHitboxBottomRight: {fileID: 2329986764599153959}
-  range: 2
-  speed: 50
+  range: 0.3
+  speed: 7.575
   cooldown: 2
   Direction: 0
   ComboCount: 0
