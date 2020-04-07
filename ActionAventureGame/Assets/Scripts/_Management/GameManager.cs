@@ -14,6 +14,7 @@ namespace GameManagement
         #region Player Variable
 
         public PlayerMovement player;
+        public bool playerCanMove;
 
         #region Health
         public int DeathCounter;
@@ -37,10 +38,16 @@ namespace GameManagement
         #region Economic Variable and Object
 
         public int CoinOwned;
+		public int maxCoin;
 
         #endregion
 
+		#region ShopVariable
 
+		public int bottesState;
+	
+
+		#endregion
 
 
 
@@ -62,6 +69,8 @@ namespace GameManagement
         {
             #region Player
 
+            playerCanMove = true;
+
             playerHealth = playerHealthMax;
             powerState = 1;
 
@@ -71,9 +80,17 @@ namespace GameManagement
 
             #region Economic
 
-            CoinOwned = 0;
+            CoinOwned = 50; 
+			maxCoin = 50;
 
             #endregion
+
+			#region Shop
+
+			bottesState = 0;
+		
+
+			#endregion
         }
 
     }
