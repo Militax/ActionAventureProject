@@ -40,9 +40,16 @@ namespace Ennemy
         {
             attackRange = GetComponent<GingerbreadMovement>().attackDistance;
             rb = GetComponent<Rigidbody2D>();
+            
         }
         void Update()
         {
+            //Dis à l'ennemi qui est le joueur
+            if (player == null)
+            {
+                player = GameManager.Instance.player;
+            }
+
             if (Vector2.Distance(transform.position, player.transform.position) <= attackRange)
             {
                 DetectPlayer();

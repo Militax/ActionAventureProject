@@ -12,14 +12,16 @@ namespace Player
     /// </summary>
     public class AttackColliders : MonoBehaviour
     {
+        public float attackduration;
         private void OnEnable()
         {
+            attackduration = GetComponentInParent<PlayerAttack>().attackDuration;
             StartCoroutine(deactivate());
         }
 
         IEnumerator deactivate()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(attackduration);
             gameObject.SetActive(false);
         }
     }

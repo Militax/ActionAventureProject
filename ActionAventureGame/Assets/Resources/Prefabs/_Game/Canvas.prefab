@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 137791464}
   - component: {fileID: 137791465}
-  - component: {fileID: 688696428}
   m_Layer: 0
   m_Name: ShopUI
   m_TagString: Untagged
@@ -48,31 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 914955946f1340a489b3dcc112f33637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &688696428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137791463}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf42e14c94f6734b88cfc79360ee7ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxCoinlvl1: {fileID: 3132216446516845399}
-  maxCoinlvl2: {fileID: 3759478400226572043}
-  maxCoinlvl3: {fileID: 3386348511633219113}
-  maxCoinEpuise: {fileID: 0}
-  botteslvl1: {fileID: 7616385897125367886}
-  botteslvl2: {fileID: 8188971839738547694}
-  bottesEpuise: {fileID: 0}
-  emptyHearth6: {fileID: 779195526}
-  emptyHearth7: {fileID: 0}
-  emptyHearth8: {fileID: 0}
-  emptyHearth9: {fileID: 0}
-  emptyHearth10: {fileID: 0}
-  emptyHearthEpuise: {fileID: 0}
 --- !u!1 &241906447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,7 +1900,6 @@ GameObject:
   - component: {fileID: 1165209760732583381}
   - component: {fileID: 1165209760732583380}
   - component: {fileID: 1165209760732583211}
-  - component: {fileID: 989902062}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2017,31 +1990,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &989902062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165209760732583210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf42e14c94f6734b88cfc79360ee7ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxCoinlvl1: {fileID: 3132216446516845399}
-  maxCoinlvl2: {fileID: 3759478400226572043}
-  maxCoinlvl3: {fileID: 3386348511633219113}
-  maxCoinEpuise: {fileID: 0}
-  botteslvl1: {fileID: 7616385897125367886}
-  botteslvl2: {fileID: 8188971839738547694}
-  bottesEpuise: {fileID: 0}
-  emptyHearth6: {fileID: 779195526}
-  emptyHearth7: {fileID: 0}
-  emptyHearth8: {fileID: 0}
-  emptyHearth9: {fileID: 0}
-  emptyHearth10: {fileID: 0}
-  emptyHearthEpuise: {fileID: 0}
 --- !u!1 &1165209761687345800
 GameObject:
   m_ObjectHideFlags: 0
