@@ -45,6 +45,5 @@ namespace Power
             yield return new WaitForSeconds(duration);
             Destroy(gameObject);
         }
-
     }
 }
