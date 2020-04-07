@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Player;
 
 /// <summary>
 /// Lucas Deutschmann
@@ -26,8 +26,11 @@ namespace Player
         float verticalDelta; //position du joystick sur l'axe vertical
         float horizontalDelta; //position du joystick sur l'axe horizontal
         public float cooldown; //temps entre deux attaques
+        public float attackDuration;//durée d'une  attaque
         int Direction;
         public int ComboCount = 0;
+        float movespeed;
+        float baseMoveSpeed;
         #endregion
         #region Bool
         public bool isAttacking = false; //état du joueur (attaque/attaque pas)
@@ -46,12 +49,15 @@ namespace Player
         // Start is called before the first frame update
         void Start()
         {
-
+            movespeed = GetComponent<PlayerMovement>().moveSpeed;
+            baseMoveSpeed = movespeed;
         }
 
         // Update is called once per frame
         void Update()
         {
+            GetComponent<PlayerMovement>().moveSpeed = movespeed;
+
             attaqueDash.x = Input.GetAxis("Horizontal");
             attaqueDash.y = Input.GetAxis("Vertical");
             #region Visée
@@ -94,12 +100,12 @@ namespace Player
 
 
 
-            if (Input.GetButtonDown("Fire1") && isAttacking==false && canAttack == true)
+            if (Input.GetButtonDown("Attack") && isAttacking==false && canAttack == true)
             {
                 Attaque();
                 ComboCount = 1;
             }
-            else if (Input.GetButtonDown("Fire1") && isAttacking == true && canAttack == true)
+            else if (Input.GetButtonDown("Attack") && isAttacking == true && canAttack == true)
             {
                 Attaque();
                 ComboCount += 1;
@@ -131,17 +137,14 @@ namespace Player
             {
                 prefabHitboxBottomLeft.SetActive(true);
             }
-            Attaque_Movement();
+            StartCoroutine(Attaque_Movement());
             myCoroutine = StartCoroutine(Attack_Cooldown());
         }
-        void Attaque_Movement()
+        IEnumerator Attaque_Movement()
         {
-            if (attaqueDash == Vector3.zero)
-            {
-                attaqueDash = new Vector3(1, 1, 0);
-            }
-            transform.position += attaqueDash*speed*Time.deltaTime;
-            
+            movespeed = baseMoveSpeed*2;
+            yield return new WaitForSeconds(attackDuration);
+            movespeed = baseMoveSpeed;
         }
         IEnumerator Attack_Cooldown()
         {
