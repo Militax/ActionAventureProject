@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Player;
 using Power;
+using GameManagement;
 
 namespace Ennemy
 {
@@ -33,6 +34,12 @@ namespace Ennemy
         } 
         void Update()
         {
+            //Dis à l'ennemi qui est le joueur
+            if (player == null)
+            {
+                player = GameManager.Instance.player;
+            }
+
             if (Vector2.Distance(transform.position, player.transform.position) <= aggroZone && !canMove)
             {
                 canMove = true;
