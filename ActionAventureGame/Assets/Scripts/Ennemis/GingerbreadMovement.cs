@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Player;
 using Power;
+using GameManagement;
 
 namespace Ennemy
 {
@@ -23,6 +24,7 @@ namespace Ennemy
         Rigidbody2D rb;
         public bool canMove = false;
         public bool isAttacking = false;
+        public bool isAffectedByWind = false;
         #endregion
 
 
@@ -32,17 +34,24 @@ namespace Ennemy
         } 
         void Update()
         {
+            //Dis à l'ennemi qui est le joueur
+            if (player == null)
+            {
+                player = GameManager.Instance.player;
+            }
+
             if (Vector2.Distance(transform.position, player.transform.position) <= aggroZone && !canMove)
             {
                 canMove = true;
             }
 
             Movement();
+            Debug.Log(canMove);
         }
 
         void Movement()
         {
-            if (canMove && !isAttacking)
+            if (canMove && !isAttacking && !isAffectedByWind)
             {
                 rb.velocity = (player.transform.position - transform.position).normalized * (moveSpeed);
             }

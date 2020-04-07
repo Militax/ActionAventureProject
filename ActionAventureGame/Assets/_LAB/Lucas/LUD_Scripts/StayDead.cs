@@ -4,6 +4,9 @@ using UnityEngine;
 using Player;
 using GameManagement;
 
+
+
+
 public class StayDead : MonoBehaviour
 {
     public Sprite state1;

@@ -10,12 +10,14 @@ public class pressureplatePlayer : MonoBehaviour
     public GameObject eventObject;
     private SpriteRenderer spr;
     public Vector3 eventPosition;
+    public GameObject ActivateEvent;
+    public GameObject DeActivateEvent;
     
     [Serializable] public class Combination
     {
         public string colliderTag;
-        public Color active;
-        public Color inactive;
+        public Sprite active;
+        public Sprite inactive;
     }
 
     public Combination[] combinations;
@@ -51,7 +53,9 @@ public class pressureplatePlayer : MonoBehaviour
                 else if (!active && instance && deSpawnOnLeave)
                     Destroy(instance);
                 Debug.Log(String.Format("this: {0} vs {1}", item.colliderTag, Tag));
-                spr.color = (active ? item.active : item.inactive);
+                spr.sprite = (active ? item.active : item.inactive);
+                ActivateEvent.SetActive(true);
+                DeActivateEvent.SetActive(false);
                 break;
             }
         }
