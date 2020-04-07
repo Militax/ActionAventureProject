@@ -14,25 +14,20 @@ namespace Ennemy
     public class GingerbreadAttackZone : MonoBehaviour
     {
         public float duration;
-        bool canDamage;
-        bool isInZone = false;
-        bool isActive = false;
-        Collider2D myCollider;
 
-        void Start()
-        {
-            myCollider = GetComponent<Collider2D>();
-            myCollider.enabled = false;
-        }
+        public bool attackIsAsked = false;
+        bool canDamage = true;
+        bool isInZone = false;
+        bool isInCoroutine = false;
+
+
         void Update()
         {
-            if (myCollider.enabled && !isActive)
+            if (attackIsAsked && !isInCoroutine)
             {
-                isActive = true;
-                canDamage = true;
                 StartCoroutine(Duration());
             }
-            if (isInZone && canDamage)
+            if (isInZone && attackIsAsked && canDamage)
             {
                 Debug.Log("Taking Damage");
                 GameManager.Instance.playerHealth--;
@@ -40,29 +35,32 @@ namespace Ennemy
             }
         }
 
+
         void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {
-                Debug.Log("Enter");
                 isInZone = true;
             }
         }
-        private void OnTriggerExit2D(Collider2D other)
+        void OnTriggerExit2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {
-                Debug.Log("Exit");
                 isInZone = false;
             }
         }
 
 
+
+
         IEnumerator Duration()
         {
+            isInCoroutine = true;
             yield return new WaitForSeconds(duration);
-            myCollider.enabled = false;
-            isActive = false;
+            attackIsAsked = false;
+            canDamage = true;
+            isInCoroutine = false;
         }
 
     }
