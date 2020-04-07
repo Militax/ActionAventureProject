@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Player;
+using GameManagement;
 
 namespace Boss
 {
     public class BossComportement : MonoBehaviour
     {
         #region Variables
+        public PlayerMovement player;
         public int CurrentPhase = 0;
         /*
          1 : Feu
@@ -18,6 +21,7 @@ namespace Boss
         public int bulletNumber;
         public float fireWaveCooldown;
         bool canShootWave = true;
+        bool playerIsPuch = false;
         #endregion
         #region LUMIERE
         public GameObject shieldPrefab;
@@ -44,6 +48,12 @@ namespace Boss
 
         void Update()
         {
+            if (player == null)
+            {
+                player = GameManager.Instance.player;
+            }
+
+
             switch (CurrentPhase)
             {
                 case (1):
@@ -135,8 +145,18 @@ namespace Boss
         }
         void createBossShield()
         {
-            GameObject shield = Instantiate(shieldPrefab, shieldSpawn.position, shieldSpawn.rotation, transform);
-            shieldActive = true;
+            if ((player.transform.position.y >= (transform.position.y - 10)) && (player.transform.position.x >= transform.position.x - 10) && (player.transform.position.x <= transform.position.x + 10))
+            {
+                if (!playerIsPuch)
+                {
+                    StartCoroutine(playerPush());
+                }
+            }
+            else
+            {
+                GameObject shield = Instantiate(shieldPrefab, shieldSpawn.position, shieldSpawn.rotation, transform);
+                shieldActive = true;
+            }
         }
         IEnumerator bossStunt()
         {
@@ -151,6 +171,21 @@ namespace Boss
             GameObject lighBullet = Instantiate(lightBulletPrefab, shootPoint.position, shootPoint.rotation);
             yield return new WaitForSeconds(lightFireCooldown);
             canShootLight = true;
+        }
+        IEnumerator playerPush()
+        {
+            playerIsPuch = true;
+            GameManager.Instance.playerCanMove = false;
+
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -5);
+            
+            yield return new WaitForSeconds(0.5f);
+
+            GameObject shield = Instantiate(shieldPrefab, shieldSpawn.position, shieldSpawn.rotation, transform);
+
+            shieldActive = true;
+            GameManager.Instance.playerCanMove = true;
+            playerIsPuch = false;
         }
 
         #endregion
