@@ -39,7 +39,7 @@ namespace Puzzle
             //{
             //    WaveFire();
             //}
-            if (input.isactive)
+            if (input.IsActive)
             {
                 WaveFire();
             }
