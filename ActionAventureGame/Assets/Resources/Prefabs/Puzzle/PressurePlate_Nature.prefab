@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597949960094387058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1391962, y: -7.234633, z: -1}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,11 +103,11 @@ MonoBehaviour:
   DeActivateEvent: {fileID: 0}
   combinations:
   - colliderTag: Player
-    active: {r: 1, g: 1, b: 0, a: 1}
-    inactive: {r: 1, g: 0, b: 1, a: 1}
+    active: {fileID: 0}
+    inactive: {fileID: 0}
   - colliderTag: Box
-    active: {r: 1, g: 1, b: 1, a: 1}
-    inactive: {r: 1, g: 0.46666667, b: 0, a: 1}
+    active: {fileID: 0}
+    inactive: {fileID: 0}
 --- !u!61 &597949960094387062
 BoxCollider2D:
   m_ObjectHideFlags: 0
