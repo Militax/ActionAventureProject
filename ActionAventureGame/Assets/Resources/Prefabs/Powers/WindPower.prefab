@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9119314185715129534}
   - component: {fileID: 5824549451496867751}
   - component: {fileID: 2698728399896116992}
-  - component: {fileID: 5601899561618851160}
+  - component: {fileID: -3489104460211419292}
   m_Layer: 0
   m_Name: WindPower
   m_TagString: WindWave
@@ -121,43 +121,15 @@ MonoBehaviour:
   power: 6
   YPerFrame: 3
   WaveDirection: {x: 0, y: 0}
---- !u!60 &5601899561618851160
-PolygonCollider2D:
+--- !u!114 &-3489104460211419292
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9119314185715129535}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.583333, y: 11.666667}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.26999998, y: 0.34}
-      - {x: 0.17999999, y: 0.51}
-      - {x: -0.01, y: 0.72999996}
-      - {x: -0.12, y: 0.82}
-      - {x: -0.26999998, y: 0.82}
-      - {x: -0.26999998, y: 0.5}
-      - {x: -0.17999999, y: 0.38}
-      - {x: -0.089999996, y: 0.19}
-      - {x: 0.01, y: 0.16}
-      - {x: -0.26999998, y: -0.19999999}
-      - {x: -0.26999998, y: -0.62}
-      - {x: -0.089999996, y: -0.62}
-      - {x: 0.099999994, y: -0.45999998}
-      - {x: 0.17, y: -0.34}
-      - {x: 0.26999998, y: -0.16}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9f57af9f1a9d445920b9e299c2a6b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
