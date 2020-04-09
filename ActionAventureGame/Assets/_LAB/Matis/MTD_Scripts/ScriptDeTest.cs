@@ -43,3 +43,8 @@ namespace Game
 
     }
 }
+
+
+
+
+//_ar.collider.GetComponent<WindReceptor>().OnWindReception.Invoke();
