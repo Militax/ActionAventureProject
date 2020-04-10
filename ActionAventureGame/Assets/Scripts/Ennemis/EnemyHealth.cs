@@ -28,16 +28,18 @@ namespace Ennemy
 
         bool canTakeDamage = true;
         #endregion
-
+        Animator animator;
         void Start()
         {
             health = maximumHealth;
+            animator = gameObject.GetComponent<Animator>();
         }
         void Update()
         {
             if (health <= 0)
             {
                 Death();
+                animator.SetTrigger("Death");
             }
         }
 
@@ -54,6 +56,7 @@ namespace Ennemy
                 {
                     Debug.Log("Hit");
                     health--;
+                    animator.SetTrigger("Degat");
                     Destroy(other.gameObject);
                     StartCoroutine(SafeCooldown());
                 }

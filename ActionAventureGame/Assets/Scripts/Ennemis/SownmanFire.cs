@@ -6,7 +6,7 @@ namespace Ennemy
 {
     public class SownmanFire : MonoBehaviour
     {
-
+        Animator animator;
         #region Variables
         public Transform player;
         public GameObject iceBulletPrefab;
@@ -18,11 +18,16 @@ namespace Ennemy
 
         #endregion
 
+        void Start()
+        {
+           animator = gameObject.GetComponent<Animator>();
+        }
         void Update()
         {
             if (isInFireZone && canShoot)
             {
                 Shooting();
+                animator.SetTrigger("Shoot");
             }
         }
 

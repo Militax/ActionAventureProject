@@ -6,7 +6,6 @@ using GameManagement;
 
 namespace Ennemy
 {
-
     /// <summary>
     /// Louis Lefebvre
     /// 
@@ -15,6 +14,7 @@ namespace Ennemy
     public class GingerbreadAttack : MonoBehaviour
     {
         enum AttackDirection { NorthWest, NorthEast, SouthWest, SouthEast }
+        Animator animator;
 
         #region Variables
         public PlayerMovement player;
@@ -40,6 +40,7 @@ namespace Ennemy
         {
             attackRange = GetComponent<GingerbreadMovement>().attackDistance;
             rb = GetComponent<Rigidbody2D>();
+            animator = gameObject.GetComponent<Animator>();
             
         }
         void Update()
@@ -54,6 +55,26 @@ namespace Ennemy
             {
                 DetectPlayer();
                 SelectAttackCollider();
+            }
+
+            if (NEcollider.attackIsAsked == true)
+            {
+                animator.SetTrigger("AttackTR");
+            }
+
+            if (NWcollider.attackIsAsked == true)
+            {
+                animator.SetTrigger("AttackTL");
+            }
+
+            if (SEcollider.attackIsAsked == true)
+            {
+                animator.SetTrigger("AttackDR");
+            }
+
+            if (SWcollider.attackIsAsked == true)
+            {
+                animator.SetTrigger("AttackDL");
             }
         }
 
@@ -99,7 +120,6 @@ namespace Ennemy
             canAttack = false;//Empêche l'ennemi d'attaquer
             GetComponent<GingerbreadMovement>().isAttacking = true;//Empêche l'ennemi de bouger
             yield return new WaitForSeconds(0.5f);//Temps avant l'attaque (Animation avant l'attaque)
-
             switch (direction)
             {
                 //ici on set active les colliders d'attaque correspondant a la bonne position relative du joueur
