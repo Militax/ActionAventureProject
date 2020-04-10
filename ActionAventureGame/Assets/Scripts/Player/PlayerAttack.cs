@@ -46,6 +46,7 @@ namespace Player
         Vector3 attackAngle; //angle de l'attaque
         Vector3 attaqueDash;
         #endregion
+        public Animator animator;
         Coroutine myCoroutine;
         #endregion
 
@@ -67,16 +68,27 @@ namespace Player
             {
                 Attaque();
                 ComboCount = 1;
+                animator.SetTrigger("Attack 1");
+                animator.ResetTrigger("Attack 2");
+                animator.ResetTrigger("Attack 3");
             }
             else if (Input.GetButtonDown("Attack") && isAttacking == true && canAttack == true)
             {
                 Attaque();
                 ComboCount += 1;
+
+                if (ComboCount == 2)
+                { animator.SetTrigger("Attack 2"); }
+
+                if (ComboCount == 3)
+                { animator.SetTrigger("Attack 3"); }
+
                 StopCoroutine(myCoroutine);
             }
             else if (isAttacking == true && ComboCount == 3)
             {
                 canAttack = false;
+                
             }
         }
 
@@ -116,6 +128,9 @@ namespace Player
             #region Visée
             horizontalDelta = Input.GetAxis("Horizontal");
             verticalDelta = Input.GetAxis("Vertical");
+
+            animator.SetFloat("Horizontal", horizontalDelta);
+            animator.SetFloat("Vertical", verticalDelta);
 
             if (verticalDelta > 0.2 || horizontalDelta > 0.2 || verticalDelta < -0.2 || horizontalDelta < -0.2)
             {

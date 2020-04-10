@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 579396681}
   - component: {fileID: 579396680}
   - component: {fileID: 579396679}
+  - component: {fileID: 579396684}
   m_Layer: 0
   m_Name: boss
   m_TagString: Untagged
@@ -452,12 +453,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d731293720d2f4848b28c19583cf778a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   CurrentPhase: 1
   bulletNumber: 40
   fireWaveCooldown: 3
+  shieldPrefab: {fileID: 0}
+  lightBulletPrefab: {fileID: 0}
+  shieldSpawn: {fileID: 0}
+  lightFireCooldown: 0
+  shieldActive: 0
+  isStunt: 0
   shootPoint: {fileID: 1251254550}
   fireBallPrefab: {fileID: 7939082732368996735, guid: 22bd1d933839d8b4ba3ed17c55041214,
     type: 3}
+  animator: {fileID: 579396684}
 --- !u!114 &579396680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,6 +481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentBossLife: 20
   maxBossLife: 20
+  animator: {fileID: 579396684}
 --- !u!60 &579396681
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -574,6 +584,25 @@ Transform:
   m_Father: {fileID: 1948542545}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &579396684
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579396678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ab1462738283694f98317a07c55a0c8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &586689110
 PrefabInstance:
   m_ObjectHideFlags: 0

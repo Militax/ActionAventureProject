@@ -11,6 +11,8 @@ namespace Game
         public int maxBossLife;
 
         bool canTakeDamage= true;
+
+        public Animator animator;
         #endregion
 
 
@@ -40,6 +42,7 @@ namespace Game
         void Death()
         {
             Debug.Log("Death");
+            animator.SetTrigger("Dead");
             Destroy(gameObject);
         }
     }

@@ -40,6 +40,7 @@ namespace Boss
 
         public Transform shootPoint;
         public GameObject fireBallPrefab;
+        public Animator animator;
 
 
         #endregion
@@ -57,16 +58,20 @@ namespace Boss
             switch (CurrentPhase)
             {
                 case (1):
+                    animator.SetTrigger("Feu_Spawn");
                     if (canShootWave)
                     {
                         FireAttack();
+                        animator.SetTrigger("Feu_Attack");
                     }
                     break;
 
                 case (2):
+                    animator.SetTrigger("Eau_Spawn");
                     break;
 
                 case (3):
+                    animator.SetTrigger("Lum_Spawn");
                     LightAttack();
                     break;
 
@@ -127,6 +132,7 @@ namespace Boss
         #region LIGHT ATTACK
         void LightAttack()
         {
+            animator.SetTrigger("Lum_Attack");
             if (!shieldActive && !isStunt)
             {
                 createBossShield();
