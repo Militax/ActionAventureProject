@@ -9,7 +9,7 @@ namespace Player
     public class playerHP : MonoBehaviour
     {
         
-        public GameObject respawnPoint;
+        
         public GameObject DeathState;
         public Animator animator;
 
@@ -37,7 +37,7 @@ namespace Player
             {
                 animator.SetTrigger("Dead");
                 Instantiate(DeathState, transform.position, Quaternion.identity);
-                gameObject.transform.position = respawnPoint.transform.position;
+                gameObject.transform.position = GameManager.Instance.RespawnPoint.transform.position;
                 GameManager.Instance.DeathCounter += 1;
                 GameManager.Instance.playerHealth = GameManager.Instance.playerHealthMax;
             }
