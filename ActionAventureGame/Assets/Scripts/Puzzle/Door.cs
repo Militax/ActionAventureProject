@@ -19,20 +19,20 @@ namespace Puzzle
        
         void Update()
         {
-            bool state = true;
+            bool state = false;
             if (linkedInput.Length == 0)
                 return;
             foreach (ActivationDevice item in linkedInput)
             {
                 if (!item.IsActive)
-                    state = false;
+                    state = true;
             }
             closeState.SetActive(state);
             openState.SetActive(!state);
 
         }
         
-        
+         
         
     }
 }

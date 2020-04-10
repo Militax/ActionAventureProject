@@ -12,17 +12,10 @@ public class SwichGlobal : ActivationDevice
     public GameObject ActivateEvent;
     public GameObject DeActivateEvent;
 
-    [Serializable]
-    public class Combination
-    {
-        public string colliderTag;
-        public Sprite active;
-        public Sprite inactive;
-    }
-
-    public Combination[] combinations;
+    
 
 
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         RefreshState(!IsActive, collision.tag);
@@ -55,11 +48,13 @@ public class SwichGlobal : ActivationDevice
     //}
     protected override void RefreshState(bool state, string tag = null)
     {
+        
         foreach (Combination item in combinations)
         {
 
             if (item.colliderTag == tag)
             {
+                current = item;
                 IsActive = !IsActive;
                 if (IsActive && eventObject && instance == null)
                 {

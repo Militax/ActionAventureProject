@@ -14,14 +14,7 @@ public class pressureplatePlayer : ActivationDevice
     public GameObject ActivateEvent;
     public GameObject DeActivateEvent;
     
-    [Serializable] public class Combination
-    {
-        public string colliderTag;
-        public Sprite active;
-        public Sprite inactive;
-    }
-
-    public Combination[] combinations;
+    
 
     
     private void OnTriggerEnter2D(Collider2D collision)
