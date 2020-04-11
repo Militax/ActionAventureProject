@@ -51,9 +51,10 @@ public class SwichGlobal : ActivationDevice
         
         foreach (Combination item in combinations)
         {
-
+            print(item.colliderTag + " vs " + tag);
             if (item.colliderTag == tag)
             {
+                print("activated");
                 current = item;
                 IsActive = !IsActive;
                 if (IsActive && eventObject && instance == null)
