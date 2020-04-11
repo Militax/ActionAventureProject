@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2758075708199943731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.92, y: -11.07, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,7 +56,10 @@ MonoBehaviour:
   - colliderTag: Sword
     active: {fileID: 21300000, guid: 4f763dabef2ae684b9dff7d5c1fc12fb, type: 3}
     inactive: {fileID: 21300000, guid: 7db7bdd0f56219a4ba8159bf29d90d16, type: 3}
-  - colliderTag: WindWave
+  - colliderTag: IceBullet
+    active: {fileID: 21300000, guid: 7db7bdd0f56219a4ba8159bf29d90d16, type: 3}
+    inactive: {fileID: 21300000, guid: 4f763dabef2ae684b9dff7d5c1fc12fb, type: 3}
+  - colliderTag: Bullet
     active: {fileID: 21300000, guid: 7db7bdd0f56219a4ba8159bf29d90d16, type: 3}
     inactive: {fileID: 21300000, guid: 4f763dabef2ae684b9dff7d5c1fc12fb, type: 3}
 --- !u!212 &2758075708199943729
@@ -97,7 +100,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 7db7bdd0f56219a4ba8159bf29d90d16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
