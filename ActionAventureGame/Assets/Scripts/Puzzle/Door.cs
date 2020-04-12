@@ -15,24 +15,25 @@ namespace Puzzle
         public ActivationDevice[] linkedInput;
         public GameObject openState;
         public GameObject closeState;
-        
-       
+        public bool startState = false;
+
+
         void Update()
         {
-            bool state = true;
+            bool state = startState;
             if (linkedInput.Length == 0)
                 return;
             foreach (ActivationDevice item in linkedInput)
             {
                 if (!item.IsActive)
-                    state = false;
+                    state = !startState;
             }
             closeState.SetActive(state);
             openState.SetActive(!state);
 
         }
-        
-        
-        
+
+
+
     }
 }

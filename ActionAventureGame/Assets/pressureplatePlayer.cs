@@ -5,7 +5,7 @@ using System;
 
 public class pressureplatePlayer : ActivationDevice
 {
-    
+    public bool stayActive = false;
     public bool deSpawnOnLeave = true;
     private GameObject instance;
     public GameObject eventObject;
@@ -64,6 +64,10 @@ public class pressureplatePlayer : ActivationDevice
 
             if (item.colliderTag == tag)
             {
+                if (!stayActive)
+                    IsActive = !IsActive;
+                else if (state)
+                    IsActive = true;
                 IsActive = !IsActive;
                 if (IsActive && eventObject && instance == null)
                 {
