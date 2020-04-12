@@ -12,26 +12,27 @@ namespace Puzzle
     /// </summary>
     public class Door : MonoBehaviour
     {
-        public GameObject linkedInput;
+        public ActivationDevice[] linkedInput;
         public GameObject openState;
         public GameObject closeState;
         
        
         void Update()
         {
-            if (linkedInput.activeSelf)
+            bool state = false;
+            if (linkedInput.Length == 0)
+                return;
+            foreach (ActivationDevice item in linkedInput)
             {
-                closeState.SetActive(false);
-                openState.SetActive(true);
+                if (!item.IsActive)
+                    state = true;
             }
-            else if (!linkedInput.activeSelf)
-            {
-                openState.SetActive(false);
-                closeState.SetActive(true);
-            }
+            closeState.SetActive(state);
+            openState.SetActive(!state);
+
         }
         
-        
+         
         
     }
 }
