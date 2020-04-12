@@ -5,71 +5,103 @@ using GameManagement;
 
 public class catBehaviour : MonoBehaviour
 {
+    private Animator animator;
     Rigidbody2D rb;
     public float prepareTime;
-    public float speed;
+    float speed;
     public float dashTime;
     public float vulnerable;
     bool canBeDamaged;
     bool playerisIn = false;
-    bool isDashing;
     bool prepare;
-    bool IsCharging;
+    public float detectionRange;
     public GameObject Player;
     Vector3 target;
+    int direction;
     
 
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            playerisIn = true;
-            StartCoroutine(Preparing());
-        }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Player")
+    //    {
+    //        playerisIn = true;
+    //        prepare = true;
+    //        StartCoroutine(Preparing());
             
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-            playerisIn = false;
-    }
+    //    }
+            
+    //}
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Player")
+    //        playerisIn = false;
+    //}
 
     IEnumerator Preparing()
     {
-        if (playerisIn)
+        while (playerisIn)
         {
-            //anim de preparation à attaquer
-            yield return new WaitForSeconds(prepareTime / 2);
+            if (prepare)
+            {
+                yield return new WaitForSeconds(prepareTime / 2);//anim de preparation à attaquer
+                Debug.Log("0");
+                prepare = false;
+            }
             target = Player.transform.position;
             yield return new WaitForSeconds(prepareTime / 2);
-            isDashing = true;
+            Debug.Log("1");
+            Dash();
             yield return new WaitForSeconds(dashTime);
-            isDashing = false;
+            Debug.Log("2");
+            
+            rb.velocity = Vector3.zero;
             canBeDamaged = true;
             yield return new WaitForSeconds(vulnerable);
+            Debug.Log("3");
             canBeDamaged = false;
-            StartCoroutine(Preparing());
+            
         }
         
         
     }
 
 
-    
+
 
     private void Update()
     {
-        Vector3 path = target - gameObject.transform.position;
+        bool activation = playerisIn;
 
-        if (isDashing)
+        playerisIn = (Vector3.Distance(transform.position, Player.transform.position) <= detectionRange);
+        Debug.Log(playerisIn);
+        if (activation != playerisIn && playerisIn)
         {
-            rb.velocity = path * speed;
+            prepare = true;
+            StartCoroutine(Preparing());
         }
         
+
+        
+    }
+
+    void Dash()
+    {
+        Vector3 path = (target - gameObject.transform.position).normalized;
+        float distance = Vector3.Distance(transform.position, target);
+        speed = distance / dashTime;
+        rb.velocity = path * speed;
+        animator.SetFloat("Direction", Vector2.Angle(transform.up, path));
+        
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, detectionRange/3 *2);
     }
 }
