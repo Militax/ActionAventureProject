@@ -5,13 +5,13 @@ using GameManagement;
 
 public class catBehaviour : MonoBehaviour
 {
-    private Animator animator;
+    //private Animator animator;
     Rigidbody2D rb;
     public float prepareTime;
     float speed;
     public float dashTime;
     public float vulnerable;
-    bool canBeDamaged;
+    public bool canBeDamaged;
     bool playerisIn = false;
     bool prepare;
     public float detectionRange;
@@ -23,7 +23,7 @@ public class catBehaviour : MonoBehaviour
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         
     }
     //private void OnTriggerEnter2D(Collider2D collision)
@@ -96,7 +96,7 @@ public class catBehaviour : MonoBehaviour
         float distance = Vector3.Distance(transform.position, target);
         speed = distance / dashTime;
         rb.velocity = path * speed;
-        animator.SetFloat("Direction", Vector2.Angle(transform.up, path));
+        //animator.SetFloat("Direction", Vector2.Angle(transform.up, path));
         
     }
     private void OnDrawGizmos()
