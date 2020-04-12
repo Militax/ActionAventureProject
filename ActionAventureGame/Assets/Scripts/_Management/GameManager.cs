@@ -13,6 +13,7 @@ namespace GameManagement
     {
         #region Player Variable
 
+        public GameObject RespawnPoint;
         public PlayerMovement player;
         public bool playerCanMove;
 

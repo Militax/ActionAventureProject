@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class doubleSwiches : MonoBehaviour
+public class doubleSwiches : ActivationDevice
 {
-    public bool isactive = false;
+    
     public doubleSwiches other;
-    private SpriteRenderer spr;
+   
     //public GameObject active;
     //public GameObject inactive;
     // Start is called before the first frame update
     private void Start()
     {
-        spr = GetComponent<SpriteRenderer>();
-        isactive = (spr.color == Color.green);//ternaire  defini actiuf/ inactif selon la couleur du prefab
+        
+        IsActive = (spr.color == Color.green);//ternaire  defini actiuf/ inactif selon la couleur du prefab
     }
 
     // Update is called once per frame
@@ -21,38 +21,38 @@ public class doubleSwiches : MonoBehaviour
     //{
     //    if (inactive.activeSelf)
     //    {
-    //        isactive = false;
+    //        IsActive = false;
     //    }
     //}
-    public void Switch(bool state) 
+    
+
+    protected override void RefreshState(bool state, string tag = null)
     {
-        if (state)
+        if (tag == "Sword" || tag == null)
         {
-            isactive = !state;
-            spr.color = (isactive ? Color.green : Color.red); // (Ternaire) si isactive = true : vert else :rouge
+            IsActive = state;
+            spr.color = (IsActive ? Color.green : Color.red); // (Ternaire) si IsActive = true : vert else :rouge
+            if(tag != null)
+                other.RefreshState(!IsActive);
+            base.RefreshState(state, tag);
         }
-        
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Sword")
-        {
-            isactive = !isactive;
-            spr.color = (isactive ? Color.green : Color.red); // (Ternaire) si isactive = true : vert else :rouge
-            other.Switch(isactive);
-        }
+        RefreshState(!IsActive, collision.tag);
 
-        //if (collision.tag == "Sword" && isactive == false)
+        //if (collision.tag == "Sword" && IsActive == false)
         //{
         //    active.SetActive(true);
         //    inactive.SetActive(false);
-        //    isactive = true;
+        //    IsActive = true;
         //}
-        //else if (collision.tag == "Sword" && isactive == true)
+        //else if (collision.tag == "Sword" && IsActive == true)
         //{
         //    inactive.SetActive(true);
         //    active.SetActive(false);
-        //    isactive = false;
+        //    IsActive = false;
         //}
     }
 }
