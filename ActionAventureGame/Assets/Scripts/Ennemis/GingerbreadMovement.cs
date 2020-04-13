@@ -26,11 +26,14 @@ namespace Ennemy
         public bool isAttacking = false;
         public bool isAffectedByWind = false;
         #endregion
+       
+        Animator animator;
 
 
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
+            animator = gameObject.GetComponent<Animator>();
         } 
         void Update()
         {
@@ -47,7 +50,32 @@ namespace Ennemy
 
             Movement();
             Debug.Log(canMove);
+
+            float xDiff = player.transform.position.x - transform.position.x;
+            float yDiff = player.transform.position.y - transform.position.y;
+            //en bas a gauche 
+            if (xDiff < 0 && yDiff < 0)
+            {
+                animator.SetFloat("Direction", 0);
+            }
+            //en bas a droite
+            if (xDiff > 0 && yDiff < 0)
+            {
+                animator.SetFloat("Direction", 0.5f);
+            }
+            //en haut a gauche
+            if (xDiff < 0 && yDiff > 0)
+            {
+                animator.SetFloat("Direction", 1);
+            }
+            //en haut a droite
+            if (xDiff > 0 && yDiff > 0)
+            {
+                animator.SetFloat("Direction", 1);
+            }
         }
+
+       
 
         void Movement()
         {

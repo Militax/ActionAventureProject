@@ -28,16 +28,18 @@ namespace Ennemy
 
         bool canTakeDamage = true;
         #endregion
-
+        Animator animator;
         void Start()
         {
             health = maximumHealth;
+            animator = gameObject.GetComponent<Animator>();
         }
         void Update()
         {
             if (health <= 0)
             {
                 Death();
+                animator.SetTrigger("Death");
             }
         }
 
@@ -46,6 +48,7 @@ namespace Ennemy
             if (other.CompareTag("Sword") && ennemyType != ("Snowman") && canTakeDamage)
             {
                 health -= GameManager.Instance.swordDamage;
+                animator.SetTrigger("Degat");
                 StartCoroutine(SafeCooldown());
             }
             if (other.CompareTag("IceBullet") && canTakeDamage)
