@@ -3,59 +3,73 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class pressureplatePlayer : MonoBehaviour
+public class pressureplatePlayer : ActivationDevice
 {
+    
     public bool deSpawnOnLeave = true;
     private GameObject instance;
     public GameObject eventObject;
-    private SpriteRenderer spr;
+    
     public Vector3 eventPosition;
     public GameObject ActivateEvent;
     public GameObject DeActivateEvent;
     
-    [Serializable] public class Combination
-    {
-        public string colliderTag;
-        public Sprite active;
-        public Sprite inactive;
-    }
+    
 
-    public Combination[] combinations;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        spr = GetComponent<SpriteRenderer>();
-    }
-
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        checkActivity(collision.tag, true);
+        RefreshState(true, collision.tag); 
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        checkActivity(collision.tag, false);
+        RefreshState(false, collision.tag);
     }
-    private void checkActivity(string Tag,bool active)
-    {
+    //private void checkActivity(string Tag,bool active)
+    //{
         
+    //    foreach (Combination item in combinations)
+    //    {
+            
+    //        if (item.colliderTag == Tag)
+    //        {
+    //            if (active && eventObject && instance == null)
+    //            {
+    //                instance = Instantiate(eventObject, eventPosition + transform.position, Quaternion.identity, transform);
+    //                iTween.PunchScale(instance, new Vector3(1, 1, 0), 0.5f);
+    //            }
+    //            else if (!active && instance && deSpawnOnLeave)
+    //                Destroy(instance);
+    //            Debug.Log(String.Format("this: {0} vs {1}", item.colliderTag, Tag));
+    //            spr.sprite = (active ? item.active : item.inactive);
+    //            alreadyPressed = true;
+    //            ActivateEvent.SetActive(true);
+    //            DeActivateEvent.SetActive(false);
+    //            break;
+    //        }
+    //    }
+    //}
+    protected override void RefreshState(bool state, string tag = null)
+    {
         foreach (Combination item in combinations)
         {
-            
-            if (item.colliderTag == Tag)
+
+            if (item.colliderTag == tag)
             {
-                if (active && eventObject && instance == null)
+                IsActive = !IsActive;
+                if (IsActive && eventObject && instance == null)
                 {
                     instance = Instantiate(eventObject, eventPosition + transform.position, Quaternion.identity, transform);
                     iTween.PunchScale(instance, new Vector3(1, 1, 0), 0.5f);
                 }
-                else if (!active && instance && deSpawnOnLeave)
+                else if (!IsActive && instance && deSpawnOnLeave)
                     Destroy(instance);
-                Debug.Log(String.Format("this: {0} vs {1}", item.colliderTag, Tag));
-                spr.sprite = (active ? item.active : item.inactive);
-                ActivateEvent.SetActive(true);
-                DeActivateEvent.SetActive(false);
+                Debug.Log(String.Format("this: {0} vs {1}", item.colliderTag, tag));
+                spr.sprite = (IsActive ? item.active : item.inactive);
+                base.RefreshState(state, tag);
+                ActivateEvent.SetActive(!ActivateEvent.activeSelf);
+                DeActivateEvent.SetActive(!DeActivateEvent.activeSelf);
                 break;
             }
         }
