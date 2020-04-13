@@ -33,7 +33,7 @@ namespace Puzzle
             if (other.CompareTag("WindWave") && !isMoving && GameManager.Instance.powerState >= powerStateRequest)
             {
                 rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-                rb.velocity = other.GetComponent<Rigidbody2D>().velocity / slowdown;
+                rb.velocity = other.GetComponentInParent<Rigidbody2D>().velocity / slowdown;
                 StartCoroutine(moveDuration());
             }
 
