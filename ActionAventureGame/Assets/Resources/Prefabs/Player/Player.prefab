@@ -885,7 +885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bbdf12953bd6de41baf0984ed76bd74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 0}
   DeathState: {fileID: 2299627288841480003, guid: 03db50bf7a7d7b54b8aec34dee723d68,
     type: 3}
   animator: {fileID: 1358456097}
