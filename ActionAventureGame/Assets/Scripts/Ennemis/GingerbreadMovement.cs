@@ -56,34 +56,22 @@ namespace Ennemy
             //en bas a gauche 
             if (xDiff < 0 && yDiff < 0)
             {
-                animator.SetBool("Run_DL 0",true);
-                animator.SetBool("Run_DR 0", false);
-                animator.SetBool("Run_TR 0", false);
-                animator.SetBool("Run_TL 0", false);
+                animator.SetFloat("Direction", 0);
             }
             //en bas a droite
             if (xDiff > 0 && yDiff < 0)
             {
-                animator.SetBool("Run_DR 0",true);
-                animator.SetBool("Run_DL 0", false);
-                animator.SetBool("Run_TR 0", false);
-                animator.SetBool("Run_TL 0", false);
+                animator.SetFloat("Direction", 0.5f);
             }
             //en haut a gauche
             if (xDiff < 0 && yDiff > 0)
             {
-                animator.SetBool("Run_TL 0",true);
-                animator.SetBool("Run_DL 0", false);
-                animator.SetBool("Run_TR 0", false);
-                animator.SetBool("Run_DR 0", false);
+                animator.SetFloat("Direction", 1);
             }
             //en haut a droite
             if (xDiff > 0 && yDiff > 0)
             {
-                animator.SetBool("Run_TR 0",true);
-                animator.SetBool("Run_DL 0", false);
-                animator.SetBool("Run_TL 0", false);
-                animator.SetBool("Run_DR 0", false);
+                animator.SetFloat("Direction", 1);
             }
         }
 

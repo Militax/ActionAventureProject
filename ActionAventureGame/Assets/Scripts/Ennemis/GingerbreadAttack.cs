@@ -59,22 +59,22 @@ namespace Ennemy
 
             if (NEcollider.attackIsAsked == true)
             {
-                animator.SetTrigger("Attack_TR");
+                animator.SetFloat("Attack",1);
             }
 
             if (NWcollider.attackIsAsked == true)
             {
-                animator.SetTrigger("Attack_TL");
+                animator.SetFloat("Attack",1);
             }
 
             if (SEcollider.attackIsAsked == true)
             {
-                animator.SetTrigger("Attack_DR");
+                animator.SetFloat("Attack",0);
             }
 
             if (SWcollider.attackIsAsked == true)
             {
-                animator.SetTrigger("Attack_DL");
+                animator.SetFloat("Attack",0.5f);
             }
         }
 
@@ -107,6 +107,7 @@ namespace Ennemy
         {
             if (canAttack)
             {
+                animator.SetTrigger("CanAttack");
                 StartCoroutine(Attack());
             }
 
