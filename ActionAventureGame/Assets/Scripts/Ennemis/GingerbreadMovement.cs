@@ -50,33 +50,44 @@ namespace Ennemy
 
             Movement();
             Debug.Log(canMove);
-        }
 
-        private void DetectPlayer()
-        {
             float xDiff = player.transform.position.x - transform.position.x;
             float yDiff = player.transform.position.y - transform.position.y;
             //en bas a gauche 
             if (xDiff < 0 && yDiff < 0)
             {
-                animator.SetTrigger("Run_DL");
+                animator.SetBool("Run_DL 0",true);
+                animator.SetBool("Run_DR 0", false);
+                animator.SetBool("Run_TR 0", false);
+                animator.SetBool("Run_TL 0", false);
             }
             //en bas a droite
             if (xDiff > 0 && yDiff < 0)
             {
-                animator.SetTrigger("Run_DR");
+                animator.SetBool("Run_DR 0",true);
+                animator.SetBool("Run_DL 0", false);
+                animator.SetBool("Run_TR 0", false);
+                animator.SetBool("Run_TL 0", false);
             }
             //en haut a gauche
             if (xDiff < 0 && yDiff > 0)
             {
-                animator.SetTrigger("Run_TL");
+                animator.SetBool("Run_TL 0",true);
+                animator.SetBool("Run_DL 0", false);
+                animator.SetBool("Run_TR 0", false);
+                animator.SetBool("Run_DR 0", false);
             }
             //en haut a droite
             if (xDiff > 0 && yDiff > 0)
             {
-                animator.SetTrigger("Run_TR");
+                animator.SetBool("Run_TR 0",true);
+                animator.SetBool("Run_DL 0", false);
+                animator.SetBool("Run_TL 0", false);
+                animator.SetBool("Run_DR 0", false);
             }
         }
+
+       
 
         void Movement()
         {

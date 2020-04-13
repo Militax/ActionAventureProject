@@ -48,6 +48,7 @@ namespace Ennemy
             if (other.CompareTag("Sword") && ennemyType != ("Snowman") && canTakeDamage)
             {
                 health -= GameManager.Instance.swordDamage;
+                animator.SetTrigger("Degat");
                 StartCoroutine(SafeCooldown());
             }
             if (other.CompareTag("IceBullet") && canTakeDamage)
@@ -56,7 +57,6 @@ namespace Ennemy
                 {
                     Debug.Log("Hit");
                     health--;
-                    animator.SetTrigger("Degat");
                     Destroy(other.gameObject);
                     StartCoroutine(SafeCooldown());
                 }

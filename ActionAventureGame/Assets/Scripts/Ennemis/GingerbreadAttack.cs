@@ -59,22 +59,22 @@ namespace Ennemy
 
             if (NEcollider.attackIsAsked == true)
             {
-                animator.SetTrigger("AttackTR");
+                animator.SetTrigger("Attack_TR");
             }
 
             if (NWcollider.attackIsAsked == true)
             {
-                animator.SetTrigger("AttackTL");
+                animator.SetTrigger("Attack_TL");
             }
 
             if (SEcollider.attackIsAsked == true)
             {
-                animator.SetTrigger("AttackDR");
+                animator.SetTrigger("Attack_DR");
             }
 
             if (SWcollider.attackIsAsked == true)
             {
-                animator.SetTrigger("AttackDL");
+                animator.SetTrigger("Attack_DL");
             }
         }
 

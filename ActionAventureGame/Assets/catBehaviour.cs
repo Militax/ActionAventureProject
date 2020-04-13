@@ -5,7 +5,7 @@ using GameManagement;
 
 public class catBehaviour : MonoBehaviour
 {
-    //private Animator animator;
+    Animator animator;
     Rigidbody2D rb;
     public float prepareTime;
     float speed;
@@ -23,7 +23,7 @@ public class catBehaviour : MonoBehaviour
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         
     }
     //private void OnTriggerEnter2D(Collider2D collision)
@@ -49,7 +49,8 @@ public class catBehaviour : MonoBehaviour
         {
             if (prepare)
             {
-                yield return new WaitForSeconds(prepareTime / 2);//anim de preparation à attaquer
+                yield return new WaitForSeconds(prepareTime / 2);
+                animator.SetTrigger("Preparation");
                 Debug.Log("0");
                 prepare = false;
             }
@@ -85,9 +86,12 @@ public class catBehaviour : MonoBehaviour
             prepare = true;
             StartCoroutine(Preparing());
         }
-        
+        if (rb.velocity == Vector2.zero)
+        {
+            Vector3 path = (Player.transform.position - gameObject.transform.position).normalized;
+            animator.SetFloat("Direction", Vector2.Angle(transform.up, path));
+        }
 
-        
     }
 
     void Dash()
@@ -96,7 +100,7 @@ public class catBehaviour : MonoBehaviour
         float distance = Vector3.Distance(transform.position, target);
         speed = distance / dashTime;
         rb.velocity = path * speed;
-        //animator.SetFloat("Direction", Vector2.Angle(transform.up, path));
+        animator.SetFloat("Direction", Vector2.Angle(transform.up, path));
         
     }
     private void OnDrawGizmos()
