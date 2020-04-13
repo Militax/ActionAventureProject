@@ -39,7 +39,6 @@ namespace Player
         {
             CalibrateWindPower();
             InstantiateWindWave();
-            animator.ResetTrigger("CompVersa activated");
         }
 
         #region Fonctions
