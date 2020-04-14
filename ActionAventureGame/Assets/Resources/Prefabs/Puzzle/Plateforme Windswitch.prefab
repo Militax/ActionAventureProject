@@ -243,7 +243,7 @@ MonoBehaviour:
   - {fileID: 0}
   openState: {fileID: 7725624591328346883}
   closeState: {fileID: 7725624591277867764}
-  startState: 0
+  startState: 1
 --- !u!1 &7725624591277867764
 GameObject:
   m_ObjectHideFlags: 0

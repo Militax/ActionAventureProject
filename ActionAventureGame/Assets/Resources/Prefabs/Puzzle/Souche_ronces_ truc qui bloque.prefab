@@ -238,4 +238,4 @@ MonoBehaviour:
   - {fileID: 0}
   openState: {fileID: 935237979579089818}
   closeState: {fileID: 935237979763491437}
-  startState: 0
+  startState: 1

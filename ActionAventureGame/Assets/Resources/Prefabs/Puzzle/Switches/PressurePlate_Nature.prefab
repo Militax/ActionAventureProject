@@ -95,9 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2aa7134a3ce6e4d8b9888b7070c4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HasBeenActivated: 0
+  IsActive: 0
+  stayActive: 0
   deSpawnOnLeave: 1
-  eventObject: {fileID: 1266034839720706491, guid: c8c1cb7dcf523e74a8a2c6d74880b183,
-    type: 3}
+  eventObject: {fileID: 0}
   eventPosition: {x: 1, y: 1, z: 0}
   ActivateEvent: {fileID: 0}
   DeActivateEvent: {fileID: 0}
