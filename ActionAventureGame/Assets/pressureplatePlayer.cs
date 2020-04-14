@@ -68,7 +68,7 @@ public class pressureplatePlayer : ActivationDevice
                     IsActive = !IsActive;
                 else if (state)
                     IsActive = true;
-                IsActive = !IsActive;
+                
                 if (IsActive && eventObject && instance == null)
                 {
                     instance = Instantiate(eventObject, eventPosition + transform.position, Quaternion.identity, transform);
@@ -78,9 +78,13 @@ public class pressureplatePlayer : ActivationDevice
                     Destroy(instance);
                 Debug.Log(String.Format("this: {0} vs {1}", item.colliderTag, tag));
                 spr.sprite = (IsActive ? item.active : item.inactive);
+                
                 base.RefreshState(state, tag);
-                ActivateEvent.SetActive(!ActivateEvent.activeSelf);
-                DeActivateEvent.SetActive(!DeActivateEvent.activeSelf);
+                if (ActivateEvent && DeActivateEvent)
+                {
+                    ActivateEvent.SetActive(!ActivateEvent.activeSelf);
+                    DeActivateEvent.SetActive(!DeActivateEvent.activeSelf);
+                }
                 break;
             }
         }
