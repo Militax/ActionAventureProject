@@ -10,7 +10,7 @@ public class PositionRendererSorter : MonoBehaviour
     private int offset = 0;
     public bool runOnce = false;
     float timer;
-    float timerMax = .1f;;
+    float timerMax = .1f;
     private Renderer myRenderer;
 
     private void Awake()
