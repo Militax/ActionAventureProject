@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3617393793440078060}
   - component: {fileID: 305916382740046316}
   - component: {fileID: 2633889303878783061}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LightBullet
   m_TagString: LightBullet
   m_Icon: {fileID: 0}

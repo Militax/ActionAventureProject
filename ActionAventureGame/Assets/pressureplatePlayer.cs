@@ -5,7 +5,7 @@ using System;
 
 public class pressureplatePlayer : ActivationDevice
 {
-    
+    public bool stayActive = false;
     public bool deSpawnOnLeave = true;
     private GameObject instance;
     public GameObject eventObject;
@@ -57,7 +57,11 @@ public class pressureplatePlayer : ActivationDevice
 
             if (item.colliderTag == tag)
             {
-                IsActive = !IsActive;
+                if (!stayActive)
+                    IsActive = !IsActive;
+                else if (state)
+                    IsActive = true;
+                
                 if (IsActive && eventObject && instance == null)
                 {
                     instance = Instantiate(eventObject, eventPosition + transform.position, Quaternion.identity, transform);
@@ -67,9 +71,13 @@ public class pressureplatePlayer : ActivationDevice
                     Destroy(instance);
                 Debug.Log(String.Format("this: {0} vs {1}", item.colliderTag, tag));
                 spr.sprite = (IsActive ? item.active : item.inactive);
+                
                 base.RefreshState(state, tag);
-                ActivateEvent.SetActive(!ActivateEvent.activeSelf);
-                DeActivateEvent.SetActive(!DeActivateEvent.activeSelf);
+                if (ActivateEvent && DeActivateEvent)
+                {
+                    ActivateEvent.SetActive(!ActivateEvent.activeSelf);
+                    DeActivateEvent.SetActive(!DeActivateEvent.activeSelf);
+                }
                 break;
             }
         }
