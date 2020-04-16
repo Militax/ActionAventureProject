@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8d4025f1f9d719a43a0d7c9fdd7e16f7
+guid: 53da2e6b6bd19d744b93e9344ebe3cce
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -11,9 +11,6 @@ TextureImporter:
   - first:
       213: -3242647363003319602
     second: GB_Attack_R_2
-  - first:
-      213: -3368574820190008635
-    second: GB_Attack_R_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -103,7 +100,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 25
+        width: 29
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -122,9 +119,9 @@ TextureImporter:
       name: GB_Attack_R_1
       rect:
         serializedVersion: 2
-        x: 25
+        x: 29
         y: 0
-        width: 25
+        width: 29
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -143,9 +140,9 @@ TextureImporter:
       name: GB_Attack_R_2
       rect:
         serializedVersion: 2
-        x: 50
+        x: 58
         y: 0
-        width: 25
+        width: 29
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -156,27 +153,6 @@ TextureImporter:
       bones: []
       spriteID: eca7454576dcff2d0800000000000000
       internalID: -3242647363003319602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GB_Attack_R_3
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 0
-        width: 25
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cacf3b6c0b6041d0800000000000000
-      internalID: -3368574820190008635
       vertices: []
       indices: 
       edges: []

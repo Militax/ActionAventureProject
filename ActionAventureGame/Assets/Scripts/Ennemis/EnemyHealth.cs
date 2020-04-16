@@ -29,6 +29,8 @@ namespace Ennemy
         bool canTakeDamage = true;
         #endregion
         Animator animator;
+        public int TimerDie;
+        bool die = false;
         void Start()
         {
             health = maximumHealth;
@@ -38,8 +40,10 @@ namespace Ennemy
         {
             if (health <= 0)
             {
-                Death();
                 animator.SetTrigger("Death");
+                StartCoroutine(cooldown());
+                if (die)
+                    Destroy(gameObject);
             }
         }
 
@@ -74,6 +78,12 @@ namespace Ennemy
             canTakeDamage = false;
             yield return new WaitForSeconds(safeTime);
             canTakeDamage = true;
+        }
+
+        IEnumerator cooldown()
+        {
+            yield return new WaitForSeconds(TimerDie);
+            die = true;
         }
     }
 }

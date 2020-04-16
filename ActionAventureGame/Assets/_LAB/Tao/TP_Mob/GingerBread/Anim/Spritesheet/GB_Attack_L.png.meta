@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 53b6fc702ddc41a45a8722064611ae93
+guid: cb488492692ac3b48b975e212dc2d7f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -338280995676331402
-    second: GB_Attack_LR_0
+      213: -7518029205995078864
+    second: GB_Attack_L_0
   - first:
-      213: 6061395623011410408
-    second: GB_Attack_LR_1
+      213: -1180946938842009399
+    second: GB_Attack_L_1
   - first:
-      213: 1875896541022027828
-    second: GB_Attack_LR_2
-  - first:
-      213: -1825369000071115202
-    second: GB_Attack_LR_3
+      213: 4746254367952280531
+    second: GB_Attack_L_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -98,12 +95,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GB_Attack_LR_0
+      name: GB_Attack_L_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 24
+        width: 29
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -112,19 +109,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 672627a0a3f2e4bf0800000000000000
-      internalID: -338280995676331402
+      spriteID: 03bb6a5f4489aa790800000000000000
+      internalID: -7518029205995078864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GB_Attack_LR_1
+      name: GB_Attack_L_1
       rect:
         serializedVersion: 2
-        x: 24
+        x: 29
         y: 0
-        width: 24
+        width: 29
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -133,19 +130,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e1e3b854376e1450800000000000000
-      internalID: 6061395623011410408
+      spriteID: 9c0bcbb140f6c9fe0800000000000000
+      internalID: -1180946938842009399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GB_Attack_LR_2
+      name: GB_Attack_L_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 58
         y: 0
-        width: 24
+        width: 29
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -154,29 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 430800317f5880a10800000000000000
-      internalID: 1875896541022027828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GB_Attack_LR_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3e40cec09cfaa6e0800000000000000
-      internalID: -1825369000071115202
+      spriteID: 3db117f63351ed140800000000000000
+      internalID: 4746254367952280531
       vertices: []
       indices: 
       edges: []

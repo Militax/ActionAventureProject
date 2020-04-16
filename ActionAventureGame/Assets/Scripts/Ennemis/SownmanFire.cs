@@ -27,7 +27,7 @@ namespace Ennemy
             if (isInFireZone && canShoot)
             {
                 Shooting();
-                animator.SetTrigger("Shoot");
+                animator.SetTrigger("CanAttack");
             }
         }
 
