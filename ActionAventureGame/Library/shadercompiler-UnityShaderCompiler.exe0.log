@@ -19,6 +19,7 @@ Cmd: compileSnippet
 Cmd: preprocessCompute
   insize=18709 outsize=18731 ok=1
 Cmd: compileComputeKernel
+<<<<<<< HEAD
   api=4 insize=18731 outsize=8518 ok=1
 Cmd: compileComputeKernel
   api=4 insize=18731 outsize=8873 ok=1
@@ -26,6 +27,11 @@ Cmd: compileComputeKernel
   api=4 insize=18731 outsize=10442 ok=1
 Cmd: compileComputeKernel
   api=4 insize=18731 outsize=10714 ok=1
+=======
+  api=4 insize=18731 outsize=8653 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=18731 outsize=10507 ok=1
+>>>>>>> LOUIS
 Cmd: preprocess
   insize=1268 outsize=443 ok=1
 Cmd: compileSnippet
@@ -37,7 +43,11 @@ Cmd: preprocess
 Cmd: preprocessCompute
   insize=1220 outsize=1226 ok=1
 Cmd: compileComputeKernel
+<<<<<<< HEAD
   api=4 insize=1226 outsize=800 ok=1
+=======
+  api=4 insize=1226 outsize=772 ok=1
+>>>>>>> LOUIS
 Cmd: preprocess
   insize=1867 outsize=322 ok=1
 Cmd: compileSnippet
@@ -170,12 +180,17 @@ Cmd: compileSnippet
   api=4 type=1 insize=2171 outsize=654 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
   insize=5024 outsize=5032 ok=1
+<<<<<<< HEAD
 Cmd: compileComputeKernel
   api=4 insize=5032 outsize=3708 ok=1
 Cmd: preprocessCompute
   insize=1858 outsize=1864 ok=1
 Cmd: compileComputeKernel
   api=4 insize=1864 outsize=1385 ok=1
+=======
+Cmd: preprocessCompute
+  insize=1858 outsize=1864 ok=1
+>>>>>>> LOUIS
 Cmd: preprocess
   insize=7490 outsize=1486 ok=1
 Cmd: compileSnippet
@@ -280,12 +295,19 @@ Cmd: compileSnippet
   api=4 type=1 insize=1792 outsize=518 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
   insize=3152 outsize=3158 ok=1
+<<<<<<< HEAD
 Cmd: compileComputeKernel
   api=4 insize=3158 outsize=47803 ok=1
 Cmd: preprocessCompute
   insize=11166 outsize=11176 ok=1
 Cmd: compileComputeKernel
   api=4 insize=11176 outsize=9684 ok=1
+=======
+Cmd: preprocessCompute
+  insize=11166 outsize=11176 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=11176 outsize=10585 ok=1
+>>>>>>> LOUIS
 Cmd: preprocess
   insize=1231 outsize=322 ok=1
 Cmd: compileSnippet
@@ -503,7 +525,11 @@ Cmd: compileSnippet
 Cmd: preprocessCompute
   insize=2128 outsize=2134 ok=1
 Cmd: compileComputeKernel
+<<<<<<< HEAD
   api=4 insize=2134 outsize=1515 ok=1
+=======
+  api=4 insize=2134 outsize=372 ok=1
+>>>>>>> LOUIS
 Cmd: preprocess
   insize=12668 outsize=566 ok=1
 Cmd: compileSnippet
@@ -774,8 +800,11 @@ Cmd: compileSnippet
   api=4 type=1 insize=1186 outsize=562 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
   insize=3168 outsize=3174 ok=1
+<<<<<<< HEAD
 Cmd: compileComputeKernel
   api=4 insize=3174 outsize=1324 ok=1
+=======
+>>>>>>> LOUIS
 Cmd: preprocess
   insize=8662 outsize=379 ok=1
 Cmd: compileSnippet
@@ -810,8 +839,11 @@ Cmd: compileSnippet
   api=4 type=1 insize=771 outsize=250 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
   insize=1953 outsize=1957 ok=1
+<<<<<<< HEAD
 Cmd: compileComputeKernel
   api=4 insize=1957 outsize=1383 ok=1
+=======
+>>>>>>> LOUIS
 Cmd: preprocessCompute
   insize=5587 outsize=5591 ok=1
 Cmd: preprocess
