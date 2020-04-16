@@ -69,12 +69,12 @@ namespace Ennemy
 
             if (SEcollider.attackIsAsked == true)
             {
-                animator.SetFloat("Attack",0);
+                animator.SetFloat("Attack",0.5f);
             }
 
             if (SWcollider.attackIsAsked == true)
             {
-                animator.SetFloat("Attack",0.5f);
+                animator.SetFloat("Attack",0);
             }
         }
 
@@ -120,7 +120,7 @@ namespace Ennemy
             rb.velocity = Vector2.zero;
             canAttack = false;//Empêche l'ennemi d'attaquer
             GetComponent<GingerbreadMovement>().isAttacking = true;//Empêche l'ennemi de bouger
-            yield return new WaitForSeconds(0.5f);//Temps avant l'attaque (Animation avant l'attaque)
+            yield return new WaitForSeconds(1f);//Temps avant l'attaque (Animation avant l'attaque)
             switch (direction)
             {
                 //ici on set active les colliders d'attaque correspondant a la bonne position relative du joueur

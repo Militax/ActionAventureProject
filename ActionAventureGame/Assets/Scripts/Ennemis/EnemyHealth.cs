@@ -29,6 +29,7 @@ namespace Ennemy
         bool canTakeDamage = true;
         #endregion
         Animator animator;
+        public int TimerDie;
         void Start()
         {
             health = maximumHealth;
@@ -38,8 +39,11 @@ namespace Ennemy
         {
             if (health <= 0)
             {
-                Death();
+                Debug.Log("die");
+                if (ennemyType == "Gingerbread")
+                    this.GetComponent<GingerbreadMovement>().isAlive = false;
                 animator.SetTrigger("Death");
+                StartCoroutine(cooldown());
             }
         }
 
@@ -74,6 +78,12 @@ namespace Ennemy
             canTakeDamage = false;
             yield return new WaitForSeconds(safeTime);
             canTakeDamage = true;
+        }
+
+        IEnumerator cooldown()
+        {
+            yield return new WaitForSeconds(TimerDie);
+            Destroy(gameObject);
         }
     }
 }
