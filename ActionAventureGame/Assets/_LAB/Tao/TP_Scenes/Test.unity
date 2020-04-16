@@ -201,6 +201,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6716102325986113104, guid: 2477d5d55e296e848aa6b79cb29077f2,
+        type: 3}
+      propertyPath: TimerDie
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716102325986113104, guid: 2477d5d55e296e848aa6b79cb29077f2,
+        type: 3}
+      propertyPath: maximumHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716102325986113104, guid: 2477d5d55e296e848aa6b79cb29077f2,
+        type: 3}
+      propertyPath: ennemyType
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6716102325986113105, guid: 2477d5d55e296e848aa6b79cb29077f2,
         type: 3}
       propertyPath: m_LocalPosition.x

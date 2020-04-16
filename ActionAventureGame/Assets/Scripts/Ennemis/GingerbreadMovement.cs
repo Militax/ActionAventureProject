@@ -29,6 +29,7 @@ namespace Ennemy
        
         Animator animator;
 
+        public bool isAlive = true;
 
         void Start()
         {
@@ -37,42 +38,48 @@ namespace Ennemy
         } 
         void Update()
         {
-            //Dis à l'ennemi qui est le joueur
-            if (player == null)
+            if (isAlive == true)
             {
-                player = GameManager.Instance.player;
-            }
+                //Dis à l'ennemi qui est le joueur
+                if (player == null)
+                {
+                    player = GameManager.Instance.player;
+                }
 
-            if (Vector2.Distance(transform.position, player.transform.position) <= aggroZone && !canMove)
-            {
-                canMove = true;
-            }
+                if (Vector2.Distance(transform.position, player.transform.position) <= aggroZone && !canMove)
+                {
+                    canMove = true;
+                }
 
-            Movement();
-            Debug.Log(canMove);
+                Movement();
+                Debug.Log(canMove);
 
-            float xDiff = player.transform.position.x - transform.position.x;
-            float yDiff = player.transform.position.y - transform.position.y;
-            //en bas a gauche 
-            if (xDiff < 0 && yDiff < 0)
-            {
-                animator.SetFloat("Direction", 0);
+                float xDiff = player.transform.position.x - transform.position.x;
+                float yDiff = player.transform.position.y - transform.position.y;
+                //en bas a gauche 
+                if (xDiff < 0 && yDiff < 0)
+                {
+                    animator.SetFloat("Direction",0);
+                }
+                //en bas a droite
+                if (xDiff > 0 && yDiff < 0)
+                {
+                    animator.SetFloat("Direction",0.5f);
+                }
+                //en haut a gauche
+                if (xDiff < 0 && yDiff > 0)
+                {
+                    animator.SetFloat("Direction",1);
+                }
+                //en haut a droite
+                if (xDiff > 0 && yDiff > 0)
+                {
+                    animator.SetFloat("Direction",1);
+                }
+
             }
-            //en bas a droite
-            if (xDiff > 0 && yDiff < 0)
-            {
-                animator.SetFloat("Direction", 0.5f);
-            }
-            //en haut a gauche
-            if (xDiff < 0 && yDiff > 0)
-            {
-                animator.SetFloat("Direction", 1);
-            }
-            //en haut a droite
-            if (xDiff > 0 && yDiff > 0)
-            {
-                animator.SetFloat("Direction", 1);
-            }
+     
+
         }
 
        

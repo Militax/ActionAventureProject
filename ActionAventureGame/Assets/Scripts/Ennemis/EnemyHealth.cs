@@ -30,7 +30,6 @@ namespace Ennemy
         #endregion
         Animator animator;
         public int TimerDie;
-        bool die = false;
         void Start()
         {
             health = maximumHealth;
@@ -40,10 +39,11 @@ namespace Ennemy
         {
             if (health <= 0)
             {
+                Debug.Log("die");
+                if (ennemyType == "Gingerbread")
+                    this.GetComponent<GingerbreadMovement>().isAlive = false;
                 animator.SetTrigger("Death");
                 StartCoroutine(cooldown());
-                if (die)
-                    Destroy(gameObject);
             }
         }
 
@@ -83,7 +83,7 @@ namespace Ennemy
         IEnumerator cooldown()
         {
             yield return new WaitForSeconds(TimerDie);
-            die = true;
+            Destroy(gameObject);
         }
     }
 }
